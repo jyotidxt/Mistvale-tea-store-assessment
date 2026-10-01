@@ -222,3 +222,68 @@ The navigation and shopping UX improvements were implemented after the core func
 - Full visual/brand redesign has not been implemented yet.
 - New professional product imagery has not been implemented yet.
 - SEO/structured data work has not been implemented yet.
+
+## 16. Responsive Design + Accessibility — Prompt 4
+
+The website was updated to improve responsive behavior and accessibility while preserving the functionality implemented in the previous phases.
+
+### Responsive Improvements
+
+- Improved the layout for desktop, tablet, and mobile screen sizes.
+- Fixed fixed-width and overflow issues where applicable.
+- Improved the responsive product grid.
+- Improved product card behavior on smaller screens.
+- Improved hero and section layouts for smaller screens.
+- Improved cart drawer responsiveness.
+- Improved Quick View responsiveness.
+- Improved search, sorting, pincode, coupon, newsletter, and checkout form layouts where required.
+- Checked for unwanted horizontal scrolling.
+
+### Accessibility Improvements
+
+- Added/improved visible keyboard focus states.
+- Improved keyboard accessibility for important interactive controls.
+- Reviewed semantic navigation and interactive elements.
+- Improved accessible names/labels for form controls.
+- Reviewed image alt text.
+- Improved cart and Quick View accessibility where required.
+- Preserved the existing toast live/status announcement.
+
+### Testing
+
+Responsive layouts were checked at:
+
+- 1440px desktop
+- 1024px
+- 768px tablet
+- 390px mobile
+- 375px mobile
+
+The following functionality was regression tested:
+
+- Add to Cart
+- Cart persistence
+- Quantity limits
+- Sold-out restriction
+- Remove item
+- Search
+- Category filtering
+- Price sorting
+- Combined filtering
+- Quick View
+- Coupon
+- Pincode
+- Navbar navigation
+- Add-to-Cart toast
+- View Cart
+
+### Current Status
+
+- Core functionality: complete.
+- Navigation and shopping UX: complete.
+- Responsive improvements: complete.
+- Accessibility improvements: complete for this phase.
+- Full brand/visual redesign: not started yet.
+- Professional product images: not created/replaced yet.
+- Image/performance optimization: not started yet.
+- SEO/structured data: not started yet.

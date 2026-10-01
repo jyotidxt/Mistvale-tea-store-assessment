@@ -2,100 +2,140 @@
 <head>
 <title>Home</title>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Pacifico|Oswald:200,300,400,500,600,700|Lato:100,300,400,700,900|Roboto:100,300,400,500,700,900');
 
-* { transition: all 0.4s !important; }
-*:focus { outline: none !important; }
+*, *::before, *::after {
+  box-sizing: border-box;
+  transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
+}
 
-body {
+*:focus-visible {
+  outline: 2px solid #d9962b !important;
+  outline-offset: 2px;
+}
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   font-family: 'Comic Sans MS', 'Comic Sans', cursive;
   font-size: 13px;
   color: #888;
   text-align: center;
+  scroll-behavior: smooth;
 }
 
-.wrapper { width: 1200px; margin: 0 auto; }
+.wrapper { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 16px; }
 
 /* announcement */
-.announce { background: #32cd32; color: #fff; font-family: Oswald; padding: 4px; font-size: 11px; }
+.announce { background: #32cd32; color: #fff; font-family: Oswald, sans-serif; padding: 6px; font-size: 11px; }
 
 /* header */
-.header { background: #800080; padding: 10px 0; box-shadow: 0 5px 25px rgba(0,0,0,.7); }
-.header .wrapper { display: flex; justify-content: space-between; align-items: center; }
-.header img { width: 180px; }
-.nav a { color: #ff69b4; margin: 0 12px; font-family: Oswald; text-decoration: none; font-size: 12px; }
-.search { padding: 6px; border-radius: 20px; border: 0; width: 160px; }
-.cart-icon { color: #fff; font-size: 22px; cursor: pointer; position: relative; }
-#cart-count { background: red; color: #fff; border-radius: 50%; font-size: 10px; padding: 2px 6px; position: absolute; top: -8px; right: -12px; }
+.header { background: #800080; padding: 12px 0; box-shadow: 0 5px 25px rgba(0,0,0,.7); }
+.header .wrapper { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
+.header img { width: 160px; max-width: 100%; height: auto; }
+.nav { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: center; align-items: center; }
+.nav a { color: #ff69b4; font-family: Oswald, sans-serif; text-decoration: none; font-size: 13px; padding: 6px 8px; min-height: 44px; display: inline-flex; align-items: center; }
+.search { padding: 8px 12px; border-radius: 20px; border: 0; width: 180px; max-width: 100%; font-size: 13px; }
+.cart-icon { color: #fff; font-size: 24px; cursor: pointer; position: relative; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+#cart-count { background: red; color: #fff; border-radius: 50%; font-size: 10px; padding: 2px 6px; position: absolute; top: 0px; right: -6px; }
 
 /* hero */
-.hero { background: url(images/hero-banner.png) center/cover; height: 520px; display: flex; align-items: center; justify-content: center; }
-.hero-title { font-family: Pacifico; font-size: 72px; color: #fff; text-shadow: 3px 3px 0 #ff1493, 6px 6px 0 #800080; }
-.hero p { color: #ffff00; font-size: 14px; }
-.shark { background: #ff1493; color: #fff; display: inline-block; padding: 4px 10px; border-radius: 3px; font-size: 10px; }
-.btn { display: inline-block; background: #ff1493; color: #fff; padding: 8px 18px; border-radius: 25px; cursor: pointer; font-family: Oswald; font-size: 12px; box-shadow: 0 8px 20px rgba(255,20,147,.8); }
-.btn:hover { transform: scale(1.15) rotate(-2deg); }
+.hero { background: url(images/hero-banner.png) center/cover; min-height: 420px; padding: 40px 16px; display: flex; align-items: center; justify-content: center; text-align: center; }
+.hero-title { font-family: Pacifico, cursive; font-size: clamp(32px, 6vw, 64px); color: #fff; text-shadow: 3px 3px 0 #ff1493, 6px 6px 0 #800080; word-break: break-word; }
+.hero p { color: #ffff00; font-size: 14px; max-width: 600px; margin: 12px auto; }
+.shark { background: #ff1493; color: #fff; display: inline-block; padding: 6px 12px; border-radius: 3px; font-size: 11px; margin-bottom: 16px; }
+.btn { display: inline-block; background: #ff1493; color: #fff; padding: 10px 20px; border-radius: 25px; cursor: pointer; font-family: Oswald, sans-serif; font-size: 13px; box-shadow: 0 4px 12px rgba(255,20,147,.6); border: 0; min-height: 44px; line-height: 24px; }
+.btn:hover { transform: scale(1.05); }
 
 /* sale */
-.sale { background: #ffff00; padding: 10px; font-family: Oswald; color: red; font-size: 16px; }
+.sale { background: #ffff00; padding: 10px; font-family: Oswald, sans-serif; color: red; font-size: 15px; }
 .blink { animation: blink 0.6s infinite; }
 @keyframes blink { 50% { opacity: 0; } }
 
 /* filters */
-.filters { margin: 30px 0 10px; }
-.filter { display: inline-block; padding: 5px 14px; margin: 3px; background: #eee; border-radius: 50px; cursor: pointer; font-size: 11px; }
+.filters { margin: 24px 0 16px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; }
+.filter { display: inline-block; padding: 8px 16px; background: #eee; border-radius: 50px; cursor: pointer; font-size: 12px; min-height: 38px; line-height: 22px; }
 .filter.active { background: #800080; color: #fff; }
-select { padding: 5px; }
+select { padding: 8px 12px; border-radius: 6px; font-size: 12px; min-height: 38px; }
 
 /* products */
-h1.section { font-family: Pacifico; color: #800080; font-size: 40px; }
-.grid { display: flex; flex-wrap: wrap; }
-.card { width: 270px; margin: 10px; padding: 10px; background: #fff; border: 2px dashed #ff69b4; border-radius: 20px; position: relative; }
-.card img { width: 100%; cursor: pointer; }
-.card h5 { font-family: Lato; font-size: 14px; color: #333; margin: 6px 0; }
-.card .desc { font-size: 12px; color: #999; }
-.card .price { font-size: 10px; color: #bbb; }
+h1.section { font-family: Pacifico, cursive; color: #800080; font-size: 36px; margin: 24px 0 12px; }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
+.card { width: 100%; margin: 0; padding: 12px; background: #fff; border: 2px dashed #ff69b4; border-radius: 16px; position: relative; display: flex; flex-direction: column; justify-content: space-between; text-align: center; }
+.card img { width: 100%; height: 160px; object-fit: contain; cursor: pointer; border-radius: 8px; }
+.card h5 { font-family: Lato, sans-serif; font-size: 14px; color: #333; margin: 8px 0 4px; }
+.card .desc { font-size: 12px; color: #888; line-height: 1.4; margin-bottom: 6px; }
+.card .price { font-size: 12px; color: #444; font-weight: bold; margin: 4px 0; }
 .card .stars { color: orange; font-size: 11px; }
-.card .add-btn { display: none; margin-top: 8px; }
-.card:hover .add-btn { display: inline-block; }
-.heart { position: absolute; top: 14px; right: 14px; color: #ccc; font-size: 20px; cursor: pointer; }
+.card .add-btn { display: inline-block; margin-top: 8px; width: 100%; }
+.heart { position: absolute; top: 12px; right: 12px; color: #ccc; font-size: 20px; cursor: pointer; }
 .heart.liked { color: red; }
-.badge-oos { background: #333; color: #fff; font-size: 9px; padding: 2px 6px; }
+.badge-oos { background: #333; color: #fff; font-size: 10px; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-top: 4px; }
 
 /* quick view */
-#quickview { display: none; position: fixed; top: 10%; left: 25%; width: 50%; background: #fff; padding: 20px; border: 5px solid #800080; z-index: 50; }
-#quickview .close { position: absolute; top: 5px; right: 10px; cursor: pointer; font-size: 20px; }
-#quickview img { width: 200px; }
+#quickview { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 540px; background: #fff; padding: 24px; border: 4px solid #800080; border-radius: 16px; z-index: 500; max-height: 90vh; overflow-y: auto; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+#quickview .close { position: absolute; top: 8px; right: 14px; cursor: pointer; font-size: 28px; line-height: 1; }
+#quickview img { width: 100%; max-width: 220px; height: auto; object-fit: contain; }
 
 /* cart drawer */
-#cart { position: fixed; top: 0; right: -400px; width: 340px; height: 100%; background: #fff; box-shadow: -10px 0 40px rgba(0,0,0,.6); padding: 20px; z-index: 60; overflow: auto; }
-.cart-line { border-bottom: 1px dotted #ccc; padding: 8px 0; text-align: left; }
-.qty { width: 40px; }
-.ship-bar { background: #eee; height: 10px; border-radius: 5px; }
-.ship-fill { background: #32cd32; height: 10px; border-radius: 5px; }
+#cart { position: fixed; top: 0; right: -100%; width: 100%; max-width: 380px; height: 100%; background: #fff; box-shadow: -10px 0 40px rgba(0,0,0,.6); padding: 20px; z-index: 600; overflow-y: auto; transition: right 0.3s ease; }
+.cart-line { border-bottom: 1px dotted #ccc; padding: 10px 0; text-align: left; }
+.qty { width: 44px; padding: 4px; text-align: center; }
+.ship-bar { background: #eee; height: 10px; border-radius: 5px; margin: 8px 0; }
+.ship-fill { background: #32cd32; height: 10px; border-radius: 5px; transition: width 0.3s ease; }
 
 /* pincode + reviews + newsletter */
-.pincode, .reviews { padding: 40px 0; }
-.review { display: inline-block; width: 300px; margin: 10px; padding: 15px; background: #fff0f5; border-radius: 15px; font-style: italic; }
-#popup { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,.8); z-index: 100; }
-#popup .box { width: 420px; margin: 120px auto; background: #fff; padding: 30px; position: relative; border-radius: 30px; }
-#popup .x { position: absolute; right: -40px; top: -40px; color: #fff; font-size: 30px; cursor: pointer; }
+.pincode, .reviews { padding: 30px 0; }
+.reviews { display: flex; flex-wrap: wrap; justify-content: center; }
+.review { display: inline-block; width: 280px; max-width: 100%; margin: 8px; padding: 16px; background: #fff0f5; border-radius: 15px; font-style: italic; }
+#popup { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,.8); z-index: 700; overflow-y: auto; }
+#popup .box { width: 90%; max-width: 420px; margin: 80px auto; background: #fff; padding: 24px; position: relative; border-radius: 20px; }
+#popup .x { position: absolute; right: 14px; top: 10px; color: #333; font-size: 28px; cursor: pointer; }
 
 /* footer */
-html { scroll-behavior: smooth; }
-.footer { background: #333; color: #777; padding: 30px 0; margin-top: 40px; }
-.footer h1 { font-family: Pacifico; color: #ff69b4; }
-.legal { font-size: 9px; color: #555; }
+.footer { background: #333; color: #777; padding: 30px 16px; margin-top: 40px; }
+.footer h1 { font-family: Pacifico, cursive; color: #ff69b4; }
+.legal { font-size: 10px; color: #aaa; line-height: 1.5; max-width: 800px; margin: 12px auto; }
+
 /* toast notification */
-#toast-container { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
-.toast { background: #1f3d2b; color: #fff; padding: 12px 18px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); font-family: Oswald, sans-serif; font-size: 13px; display: flex; align-items: center; gap: 12px; }
-.toast-btn { background: #d9962b; color: #fff; border: 0; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 11px; text-transform: uppercase; font-weight: bold; }
+#toast-container { position: fixed; bottom: 20px; right: 20px; z-index: 1000; max-width: 90%; }
+.toast { background: #1f3d2b; color: #fff; padding: 12px 18px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); font-family: Oswald, sans-serif; font-size: 13px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.toast-btn { background: #d9962b; color: #fff; border: 0; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 11px; text-transform: uppercase; font-weight: bold; min-height: 32px; }
 .toast-btn:hover { background: #b87c1e; }
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .header .wrapper { flex-direction: column; text-align: center; }
+  .nav { width: 100%; gap: 4px 12px; }
+  .search { width: 100%; max-width: 260px; }
+  #quickview { width: 94%; max-width: 100%; padding: 16px; }
+  #popup .box { margin: 40px auto; padding: 20px; }
+}
+
+@media (max-width: 480px) {
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .card { padding: 8px; }
+  .card h5 { font-size: 12px; }
+  .card .desc { font-size: 10px; }
+  .filter { padding: 6px 12px; font-size: 11px; }
+  #cart { width: 100%; max-width: 100%; }
+}
 </style>
 </head>
 <body>
@@ -118,23 +158,23 @@ html { scroll-behavior: smooth; }
 
 <div class="hero" id="hero">
   <div>
-    <div class="hero-title animate__animated animate__bounceIn">BEST TEA IN THE WORLD!!!</div>
+    <h1 class="hero-title animate__animated animate__bounceIn">BEST TEA IN THE WORLD!!!</h1>
     <p>Hand-picked from the misty hills. The most amazing, world-class, premium teas you will ever taste!!!</p>
     <div class="shark">&#9733; AS SEEN ON SHARK TANK INDIA &#9733;</div><br><br>
-    <div class="btn" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">SHOP NOW</div>
+    <button class="btn" type="button" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">SHOP NOW</button>
   </div>
 </div>
 
 <div class="sale"><span class="blink">SALE!!!</span> Diwali Sale ends in: <span id="countdown"></span></div>
 
 <div class="wrapper" id="shop">
-  <h1 class="section">Our Teas</h1>
+  <h2 class="section">Our Teas</h2>
   <div class="filters">
-    <div class="filter active" onclick="filterProducts('all', this)">All</div>
-    <div class="filter" onclick="filterProducts('Black', this)">Black</div>
-    <div class="filter" onclick="filterProducts('green', this)">Green</div>
-    <div class="filter" onclick="filterProducts('Herbal', this)">Herbal</div>
-    <div class="filter" onclick="filterProducts('Gifts', this)">Gifts</div>
+    <div class="filter active" tabindex="0" role="button" onclick="filterProducts('all', this)" onkeydown="if(event.key==='Enter'||event.key===' '){ filterProducts('all', this); event.preventDefault(); }">All</div>
+    <div class="filter" tabindex="0" role="button" onclick="filterProducts('Black', this)" onkeydown="if(event.key==='Enter'||event.key===' '){ filterProducts('Black', this); event.preventDefault(); }">Black</div>
+    <div class="filter" tabindex="0" role="button" onclick="filterProducts('green', this)" onkeydown="if(event.key==='Enter'||event.key===' '){ filterProducts('green', this); event.preventDefault(); }">Green</div>
+    <div class="filter" tabindex="0" role="button" onclick="filterProducts('Herbal', this)" onkeydown="if(event.key==='Enter'||event.key===' '){ filterProducts('Herbal', this); event.preventDefault(); }">Herbal</div>
+    <div class="filter" tabindex="0" role="button" onclick="filterProducts('Gifts', this)" onkeydown="if(event.key==='Enter'||event.key===' '){ filterProducts('Gifts', this); event.preventDefault(); }">Gifts</div>
     &nbsp;&nbsp;
     <select id="sort" onchange="sortProducts()" aria-label="Sort teas">
       <option value="default">Sort</option>
@@ -146,22 +186,22 @@ html { scroll-behavior: smooth; }
   <div class="grid" id="grid"></div>
 </div>
 
-<div id="quickview">
-  <div class="close" onclick="document.getElementById('quickview').style.display='none'">&times;</div>
+<div id="quickview" role="dialog" aria-modal="true" aria-label="Product Quick View">
+  <div class="close" onclick="closeQuickView()" tabindex="0" role="button" aria-label="Close Quick View" onkeydown="if(event.key==='Enter'||event.key===' '){ closeQuickView(); event.preventDefault(); }">&times;</div>
   <div id="qv-body"></div>
 </div>
 
-<div id="cart">
-  <div style="text-align:right;cursor:pointer" onclick="closeCart()">&times; close</div>
+<div id="cart" role="dialog" aria-modal="true" aria-label="Shopping Cart">
+  <div style="text-align:right;cursor:pointer" onclick="closeCart()" tabindex="0" role="button" aria-label="Close Cart" onkeydown="if(event.key==='Enter'||event.key===' '){ closeCart(); event.preventDefault(); }">&times; close</div>
   <h2>Your Cart</h2>
   <div id="ship-msg"></div>
   <div class="ship-bar"><div class="ship-fill" id="ship-fill"></div></div>
   <div id="cart-items"></div>
   <input id="coupon" placeholder="Coupon code" aria-label="Coupon code">
-  <div class="btn" onclick="applyCoupon()">APPLY</div>
+  <button class="btn" type="button" onclick="applyCoupon()">APPLY</button>
   <div id="totals"></div>
   <br>
-  <div class="btn" onclick="alert('Order placed!!')">CHECKOUT</div>
+  <button class="btn" type="button" onclick="alert('Order placed!!')">CHECKOUT</button>
 </div>
 
 <!-- Checkout contract: the backend reads this form. Do not rename it or its fields. -->
@@ -173,32 +213,32 @@ html { scroll-behavior: smooth; }
 <div class="wrapper pincode">
   <h3>Check delivery</h3>
   <input id="pin" placeholder="Enter pincode" aria-label="Enter pincode">
-  <div class="btn" onclick="checkPin()">CHECK</div>
+  <button class="btn" type="button" onclick="checkPin()">CHECK</button>
   <div id="pin-result"></div>
 </div>
 
 <div class="wrapper reviews" id="about">
-  <h1 class="section">Rated 4.9/5 by 10,000+ happy customers!!</h1>
+  <h2 class="section">Rated 4.9/5 by 10,000+ happy customers!!</h2>
   <div class="review">"Best masala chai I have ever had. Tastes like my nani's kitchen." <br><b>- Ananya, Pune</b></div>
   <div class="review">"The Darjeeling first flush is so fresh. Packaging was lovely too." <br><b>- Rohit, Bengaluru</b></div>
   <div class="review">"Bought the sampler as a gift and now my whole family is hooked." <br><b>- Meera, Kochi</b></div>
 </div>
 
-<div id="popup">
+<div id="popup" role="dialog" aria-modal="true" aria-label="Join the Tea Club">
   <div class="box">
-    <div class="x" onclick="document.getElementById('popup').style.display='none'">&times;</div>
+    <div class="x" onclick="document.getElementById('popup').style.display='none'" tabindex="0" role="button" aria-label="Close popup" onkeydown="if(event.key==='Enter'||event.key===' '){ document.getElementById('popup').style.display='none'; event.preventDefault(); }">&times;</div>
     <h2>JOIN THE TEA CLUB!!!</h2>
     <p>Get 10% off your first order</p>
     <input id="nl-email" placeholder="Your email" aria-label="Your email">
-    <div class="btn" onclick="subscribe()">SUBSCRIBE</div>
+    <button class="btn" type="button" onclick="subscribe()">SUBSCRIBE</button>
     <div id="nl-msg"></div>
   </div>
 </div>
 
 <div class="footer" id="contact">
-  <h1>MistVale</h1>
+  <h2>MistVale</h2>
   <p>Mistvale Tea Co. &middot; 14 Hill Cart Road, Siliguri, West Bengal 734001 &middot; hello@mistvale.example &middot; +91 90000 12345</p>
-  <p><i class="fa fa-instagram"></i> &nbsp; <i class="fa fa-facebook"></i> &nbsp; <i class="fa fa-youtube"></i></p>
+  <p><i class="fa fa-instagram" aria-label="Instagram"></i> &nbsp; <i class="fa fa-facebook" aria-label="Facebook"></i> &nbsp; <i class="fa fa-youtube" aria-label="YouTube"></i></p>
   <!-- LEGAL: approved wording, do not edit (ref MV-LGL-07) -->
   <p class="legal">All prices are inclusive of GST. Returns are accepted within 7 days of delivery on unopened packs only; opened tea cannot be returned for hygiene reasons. Tea colour and flavour may vary slightly between harvests.</p>
   <p class="legal">&copy; 2020 MistVale. All right reserved.</p>
@@ -345,6 +385,19 @@ function toggleWish(el) {
     $('.heart').toggleClass('liked');
   }
 }
+
+function closeQuickView() {
+  document.getElementById('quickview').style.display = 'none';
+}
+
+window.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    closeQuickView();
+    closeCart();
+    var popup = document.getElementById('popup');
+    if (popup) popup.style.display = 'none';
+  }
+});
 
 function openQuickView(id) {
   var p = PRODUCTS.find(function (x) { return x.id === Number(id); });

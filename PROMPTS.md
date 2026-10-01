@@ -661,3 +661,305 @@ Do not modify anything outside this scope.]
 
 - Outcome: accepted
 - Why: The AI implemented the requested navigation and shopping UX improvements. Navbar links now navigate to the existing page sections, Add to Cart provides immediate toast feedback with a View Cart action, and cart/accessibility behavior was improved. Prompt 2 functionality remained intact and browser testing reported zero JavaScript errors.
+
+## Prompt 4 — Responsive Design + Accessibility
+
+- Tool: [Antigravity]
+- Type: code
+- Prompt:
+
+> [## Prompt 4 — Responsive Design + Accessibility
+
+Now improve the existing `index.html` for responsive behavior and accessibility.
+
+IMPORTANT:
+- Work on the existing `index.html`.
+- Make targeted, controlled changes.
+- Do NOT rewrite the entire file.
+- Preserve the existing PRODUCTS data exactly.
+- Do not change the provided API START/END block.
+- Do not add React, Next.js, Vite, Tailwind, Bootstrap, jQuery, or any other framework/library.
+- Keep the required single HTML file.
+- Do not modify README.md or BRAND.md.
+- Do not create or modify NOTES.md or PROMPTS.md.
+- Do not fabricate product information, ratings, reviews, claims, or business data.
+- Preserve all functionality from Prompts 2 and 3.
+- Do not change business rules.
+- Do not redesign the brand yet. A separate phase will handle the full visual/brand redesign.
+
+## 1. Responsive Foundation
+
+The current website is not sufficiently responsive on smaller screens.
+
+Inspect the existing CSS and fix the underlying responsive issues.
+
+The page must work properly at:
+
+- Desktop
+- Tablet
+- Mobile
+
+Do not simply hide important content on smaller screens.
+
+Fix issues such as:
+- Fixed-width containers that overflow the viewport
+- Horizontal scrolling
+- Product grids that do not adapt
+- Sections that become too wide
+- Images overflowing their containers
+- Text overflowing
+- Buttons becoming difficult to tap
+- Navigation becoming cramped
+- Cart drawer exceeding the viewport
+- Quick View/modal exceeding the viewport
+- Form fields becoming too wide
+
+Use CSS media queries and responsive layout techniques already available in the project.
+
+## 2. Mobile Navigation
+
+Make the existing navigation usable on small screens.
+
+Requirements:
+- Navigation must remain accessible.
+- Links must be easy to tap.
+- No horizontal page overflow.
+- Header content must fit within the viewport.
+- Do not invent a completely different navigation system unless the existing structure requires it.
+
+If a mobile menu is necessary, implement it minimally using the existing HTML/CSS/JavaScript rather than adding a library.
+
+## 3. Responsive Product Grid
+
+Make the tea/product grid responsive.
+
+Requirements:
+- Desktop can display multiple product columns.
+- Tablet should reduce the number of columns appropriately.
+- Mobile should use a comfortable number of columns for the screen size.
+- Product cards must remain readable.
+- Images must remain inside their cards.
+- Product names/prices/buttons must not overflow.
+- Add to Cart must remain usable on touch devices.
+- Avoid excessive empty space.
+
+Do not change the product data.
+
+## 4. Responsive Product Cards
+
+Fix product-card behavior on smaller screens.
+
+Make sure:
+- Cards do not resize unpredictably.
+- Add to Cart does not cause layout jumps.
+- Product images maintain appropriate aspect ratio.
+- Text wraps naturally.
+- Buttons remain visible and usable.
+- Hover-only functionality is not required for essential actions on touch devices.
+
+Preserve the working Add-to-Cart toast from Prompt 3.
+
+## 5. Responsive Hero and Sections
+
+Check the hero and major sections at mobile/tablet widths.
+
+Fix:
+- Oversized headings
+- Text overlapping images
+- Images overflowing
+- Excessive horizontal padding
+- Content going outside the viewport
+- Buttons becoming too small or difficult to tap
+- Unnecessary large empty areas
+
+Do not perform the complete visual redesign yet.
+
+## 6. Responsive Cart
+
+The cart drawer must work properly on mobile and tablet.
+
+Verify:
+- Cart fits within the viewport.
+- Product image/name/price remain readable.
+- Quantity controls are usable by touch.
+- Remove controls remain accessible.
+- Checkout area remains visible and usable.
+- Closing the cart works.
+- No horizontal overflow is introduced.
+
+Do not change the cart business logic.
+
+## 7. Responsive Quick View
+
+Make Quick View usable on mobile/tablet.
+
+Verify:
+- Modal fits within the viewport.
+- Product image remains visible.
+- Product information remains readable.
+- Close control is easy to access.
+- Add to Cart remains usable.
+- Modal does not create horizontal page scrolling.
+
+## 8. Forms
+
+Make these existing controls responsive:
+
+- Search
+- Sort dropdown
+- Pincode input/button
+- Coupon input/button
+- Newsletter input/button
+- Checkout fields, if present
+
+Requirements:
+- Inputs fit their containers.
+- Text is readable.
+- Buttons remain usable.
+- Labels/instructions remain associated with the correct fields.
+- No horizontal overflow.
+
+Do not add fake form functionality.
+
+## 9. Accessibility — Focus and Keyboard
+
+Improve accessibility without doing a full redesign.
+
+Requirements:
+- Do not remove browser focus indicators.
+- Add a visible `:focus-visible` state where appropriate.
+- Navbar links must be keyboard accessible.
+- Cart control must remain keyboard accessible.
+- Buttons must be actual buttons where possible.
+- Interactive controls should not depend only on mouse hover.
+- Keyboard users must be able to reach important shopping actions.
+
+Do not use unnecessary `tabindex` values on normal semantic elements.
+
+## 10. Accessibility — Semantic HTML
+
+Review the existing markup and make targeted improvements where necessary.
+
+Check:
+- Navigation uses appropriate semantic structure.
+- Buttons are buttons.
+- Links are links.
+- Form inputs have associated labels or appropriate accessible names.
+- Images have meaningful alt text where appropriate.
+- Decorative images do not create unnecessary screen-reader noise.
+- Heading hierarchy is logical.
+
+Do not rewrite the whole HTML structure.
+
+## 11. Accessibility — Cart and Quick View
+
+Improve the existing cart and Quick View interactions where needed.
+
+Check:
+- Dialog/modal has an appropriate accessible name.
+- Close buttons have accessible names.
+- Important status messages can be announced.
+- Keyboard users can operate the controls.
+- Escape-to-close may be implemented if appropriate.
+- Focus behavior should not make the interface unusable.
+
+Do not add excessive ARIA when native HTML semantics are sufficient.
+
+## 12. Mobile Testing
+
+After implementation, test at approximately these viewport widths:
+
+- 1440px desktop
+- 1024px tablet/small desktop
+- 768px tablet
+- 390px mobile
+- 375px mobile
+
+At each size check:
+
+- Header
+- Hero
+- Search
+- Category filters
+- Sort
+- Product grid
+- Product cards
+- Add to Cart
+- Toast
+- Cart drawer
+- Quick View
+- About section
+- Contact section
+- Footer
+- Forms
+
+There must be no unwanted horizontal scrolling.
+
+## 13. Regression Testing
+
+Do NOT break functionality from previous phases.
+
+Verify:
+
+- Add to Cart
+- Cart persistence
+- Quantity limits
+- Sold-out restriction
+- Remove item
+- Search
+- Category filtering
+- Price sorting
+- Combined filtering
+- Quick View
+- Coupon
+- Pincode
+- Navbar navigation
+- Add-to-Cart toast
+- View Cart from toast
+
+## Scope Boundary
+
+Do NOT implement these yet:
+
+- Full brand/color redesign
+- New professional product images
+- Image generation
+- Image optimization
+- Full SEO/JSON-LD implementation
+- Major content changes
+- New marketing claims
+- Trust Strip redesign
+- FAQ redesign
+- Newsletter redesign
+- Performance optimization
+
+Those will be handled in later phases.
+
+## Before finishing
+
+Run a syntax check.
+
+Test the page at desktop, tablet, and mobile widths.
+
+Check the browser console for JavaScript errors.
+
+Check specifically for horizontal overflow.
+
+Then report:
+
+1. Files changed
+2. Responsive issues found
+3. Responsive fixes made
+4. Accessibility fixes made
+5. Breakpoints/media queries added or changed
+6. Mobile/tablet tests performed
+7. Any horizontal overflow found
+8. Any console errors
+9. Confirmation that Prompt 2 and Prompt 3 functionality still works
+10. Any remaining responsive/accessibility issues
+11. Concise summary of exactly what changed
+
+Do not modify anything outside this scope.]
+
+- Outcome: accepted
+- Why: The AI implemented responsive layout and targeted accessibility improvements while preserving the existing cart, search, filtering, sorting, Quick View, navigation, and Add-to-Cart functionality.
