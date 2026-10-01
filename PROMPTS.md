@@ -963,3 +963,378 @@ Do not modify anything outside this scope.]
 
 - Outcome: accepted
 - Why: The AI implemented responsive layout and targeted accessibility improvements while preserving the existing cart, search, filtering, sorting, Quick View, navigation, and Add-to-Cart functionality.
+
+## Prompt 5 — Brand + Visual Design
+
+- Tool: [Antigravity]
+- Type: code
+- Prompt:
+
+> [## Prompt 5 — Brand + Visual Design
+
+Now improve the visual design of the existing Mistvale Tea Co. website according to the requirements already provided in `BRAND.md` and `README.md`.
+
+IMPORTANT:
+- Work on the existing `index.html`.
+- Make controlled, targeted changes.
+- Do NOT rewrite the entire application.
+- Preserve all existing functionality from Prompts 2, 3, and 4.
+- Preserve the existing PRODUCTS data exactly.
+- Do not change the provided API START/END block.
+- Do not add React, Next.js, Vite, Tailwind, Bootstrap, jQuery, or other frameworks/libraries.
+- Keep the required single HTML file.
+- Do not modify README.md or BRAND.md.
+- Do not create or modify NOTES.md or PROMPTS.md.
+- Do not fabricate product information, reviews, ratings, testimonials, marketing claims, or business information.
+- Follow the actual brand requirements in BRAND.md instead of inventing a new brand identity.
+- Do not generate or replace product images in this phase.
+- Do not implement SEO/JSON-LD in this phase.
+- Do not perform major JavaScript refactoring.
+
+## 1. Review Brand Requirements First
+
+Before changing the design:
+
+- Read `BRAND.md`.
+- Read the relevant design requirements in `README.md`.
+- Identify the required:
+  - colors
+  - typography
+  - visual style
+  - spacing/layout guidance
+  - prohibited visual effects
+  - required sections
+  - content/claim restrictions
+
+Use those requirements as the source of truth.
+
+Do not guess brand colors or fonts if they are specified in the files.
+
+## 2. Overall Visual Hierarchy
+
+Improve the page so it looks like a professional premium tea-store website.
+
+Focus on:
+- Clear visual hierarchy
+- Consistent spacing
+- Consistent typography
+- Strong but restrained section separation
+- Better alignment
+- Better use of whitespace
+- Clear primary and secondary actions
+- Consistent border radius
+- Consistent shadows
+- Consistent button styling
+
+Avoid:
+- excessive gradients
+- excessive shadows
+- excessive animations
+- flashy/neon effects
+- unnecessary decorative elements
+- excessive empty space
+- visual clutter
+
+Do not make the website look like a generic AI-generated template.
+
+## 3. Header / Navbar
+
+Polish the existing header while preserving the working navigation from Prompt 3.
+
+Improve:
+- spacing
+- typography
+- alignment
+- logo presentation
+- active/hover/focus states
+- cart icon presentation
+- overall visual hierarchy
+
+Do not break:
+- Home
+- Shop
+- About
+- Contact
+- Cart interaction
+- keyboard accessibility
+
+## 4. Hero Section
+
+Improve the existing hero section according to BRAND.md.
+
+Focus on:
+- clear headline hierarchy
+- readable supporting text
+- strong primary CTA
+- balanced image/text composition
+- appropriate spacing
+- professional visual presentation
+
+Do not invent new claims.
+
+Do not replace the hero image in this phase.
+
+The existing Shop Now functionality must continue to work.
+
+## 5. Product / Shop Section
+
+Improve the product section visually.
+
+Product cards should have:
+- consistent dimensions
+- clean spacing
+- clear product name
+- clear price
+- clear category/details where already present
+- consistent Add to Cart button
+- professional hover/focus behavior
+- no layout jumping
+- no unnecessary dashed borders if they conflict with the brand
+
+Do not change:
+- product names
+- product prices
+- product stock
+- product IDs
+- product data
+
+Do not generate new product images yet.
+
+Keep the working:
+- Search
+- Category filtering
+- Sorting
+- Quick View
+- Add to Cart
+
+## 6. Buttons and Controls
+
+Create a consistent visual language for:
+- Add to Cart
+- Shop Now
+- View Cart
+- Search
+- Sort
+- Category controls
+- Coupon button
+- Pincode button
+- Newsletter button
+- Checkout controls
+
+Buttons should:
+- have clear hover states
+- have clear focus states
+- have adequate touch size
+- not jump in size when hovered
+- remain readable on mobile
+
+Do not change their underlying functionality.
+
+## 7. Trust Strip
+
+If `README.md` / `BRAND.md` requires a Trust Strip and it is currently missing, implement it using only the information explicitly provided by the assessment files.
+
+Do NOT invent:
+- certifications
+- guarantees
+- shipping claims
+- ratings
+- statistics
+- awards
+
+Keep the content factual and source-supported.
+
+## 8. FAQ
+
+If the assessment requires an FAQ section and it is currently missing, implement the required FAQ using only information supported by `README.md` / `BRAND.md`.
+
+Do not invent answers.
+
+Use an accessible structure such as expandable FAQ items where appropriate.
+
+## 9. Newsletter
+
+Review the existing newsletter implementation against the requirements in `README.md` and `BRAND.md`.
+
+If the requirements specify an inline newsletter section rather than a popup:
+- keep it inline
+- make it visually consistent with the page
+- make the form responsive
+- preserve its existing functionality
+- do not create fake subscription behavior
+
+Do not add unnecessary popups.
+
+## 10. Prohibited / Unwanted Visual Effects
+
+Remove or replace visual effects that conflict with the brand requirements.
+
+In particular, check for:
+- marquee effects
+- blinking effects
+- excessive animation
+- distracting hover transformations
+- unnecessary global transitions
+
+Keep animations subtle and purposeful.
+
+Do not remove the Add-to-Cart toast animation if it is already working correctly.
+
+## 11. Typography
+
+Apply the correct typography from BRAND.md.
+
+Check:
+- headings
+- body text
+- navigation
+- buttons
+- product names
+- prices
+- forms
+- FAQ
+
+Create a clear hierarchy without making text excessively large.
+
+Do not add unnecessary font libraries.
+
+## 12. Color System
+
+Use only the brand-approved color system from BRAND.md.
+
+Ensure:
+- sufficient text contrast
+- consistent primary color
+- consistent secondary/accent usage
+- buttons have appropriate contrast
+- backgrounds do not overpower the content
+
+Do not invent a new color palette.
+
+## 13. Spacing and Layout
+
+Improve inconsistent spacing across:
+- header
+- hero
+- shop section
+- product grid
+- About section
+- FAQ
+- newsletter
+- Contact
+- footer
+
+Avoid both:
+- cramped sections
+- excessive empty vertical space
+
+Keep the responsive behavior implemented in Prompt 4 intact.
+
+## 14. Accessibility Regression Check
+
+After visual changes, verify:
+- focus states remain visible
+- buttons remain keyboard accessible
+- links remain keyboard accessible
+- form labels/accessibility names remain intact
+- text contrast is reasonable
+- interactive elements remain usable
+- FAQ controls are keyboard accessible if implemented
+
+Do not remove accessibility improvements from Prompt 4 for visual reasons.
+
+## 15. Functional Regression Check
+
+Do NOT break any existing functionality.
+
+Verify:
+- Navbar navigation
+- Search
+- Category filtering
+- Price sorting
+- Quick View
+- Add to Cart
+- Cart persistence
+- Quantity limits
+- Sold-out restriction
+- Cart drawer
+- Add-to-Cart toast
+- View Cart from toast
+- Coupon
+- Pincode
+- Newsletter
+- Checkout
+
+## Scope Boundary
+
+Do NOT implement these yet:
+
+- New/generated product images
+- Product image replacement
+- Image optimization
+- Major performance optimization
+- SEO metadata
+- JSON-LD structured data
+- Open Graph/Twitter metadata
+- Major JavaScript refactoring
+- New external libraries
+
+These will be handled in later phases.
+
+## Before finishing
+
+Compare the final design against `BRAND.md` and the relevant `README.md` requirements.
+
+Then report:
+
+1. Files changed
+2. Brand requirements identified
+3. Visual changes made
+4. Sections added or improved
+5. Colors/fonts applied
+6. Trust Strip/FAQ/newsletter changes, if required
+7. Prohibited visual effects removed
+8. Responsive behavior preserved
+9. Accessibility preserved
+10. Functional regression tests performed
+11. Any console errors
+12. Any remaining visual/brand issues
+13. Concise summary of exactly what changed
+
+Do not modify anything outside this scope.]
+
+- Outcome: accepted
+- Why: The AI improved the visual design of the Mistvale Tea Co. website according to the existing brand requirements while preserving the functionality implemented in the previous phases. The navbar, hero section, product section, buttons, controls, typography, spacing, and overall visual hierarchy were improved. Existing shopping, navigation, responsive, and accessibility functionality was preserved. A follow-up fix was also made to restore visibility of the navbar cart icon after the visual changes.
+
+### Prompt 5.1 — Cart Icon Visibility Fix
+
+- Tool: [Antigravity]
+- Type: code
+- Prompt:
+
+> [## Small Fix — Cart Icon Visibility
+
+In the existing `index.html`, fix only the issue where the cart icon/button in the navbar is not visually visible after the Prompt 5 brand/visual design changes.
+
+Requirements:
+- Make the existing cart icon clearly visible in the navbar.
+- Preserve the current cart functionality, cart badge/count, cart drawer, and keyboard accessibility.
+- Do not change the cart logic.
+- Do not change the navbar structure unnecessarily.
+- Do not redesign the navbar.
+- Do not change any other working functionality or styling.
+- Keep the current brand colors and visual design from Prompt 5.
+- Make sure the cart icon remains visible on desktop, tablet, and mobile.
+- Check that the cart badge is also visible when the cart has items.
+
+After making the fix:
+1. Test the cart icon visually.
+2. Add an item and confirm the cart badge updates.
+3. Click the cart icon and confirm the cart drawer opens.
+4. Check desktop and mobile.
+5. Check the browser console for JavaScript errors.
+
+Report exactly what CSS/HTML was changed.]
+
+- Outcome: accepted
+- Why: The navbar cart icon was not visible after the visual design changes. The AI fixed the visibility issue while preserving cart functionality, cart badge behavior, and the existing navbar design.
