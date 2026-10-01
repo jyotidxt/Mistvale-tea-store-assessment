@@ -1338,3 +1338,174 @@ Report exactly what CSS/HTML was changed.]
 
 - Outcome: accepted
 - Why: The navbar cart icon was not visible after the visual design changes. The AI fixed the visibility issue while preserving cart functionality, cart badge behavior, and the existing navbar design.
+
+## Prompt 6 — Professional Product Images + Image Performance
+
+- Tool: [Antigravity]
+- Type: code + image/performance
+- Prompt:
+
+> [## Prompt 6 — Professional Product Images + Image Performance
+
+Work on the existing Mistvale Tea Co. project in the current repository.
+
+IMPORTANT:
+- Read README.md and BRAND.md before making changes.
+- Continue from the current codebase after Prompt 5.
+- Make controlled, targeted changes only.
+- Do not rewrite the entire index.html.
+- Preserve all existing functionality from Prompts 2, 3, 4, and 5.
+- Do not modify the PRODUCTS data structure or product information unless required by the provided requirements.
+- Do not modify the API START/END block.
+- Do not introduce React, Next.js, Vite, Tailwind, Bootstrap, jQuery, or unnecessary dependencies.
+- Keep the project as the existing single-page HTML implementation.
+- Do not modify README.md, BRAND.md, NOTES.md, or PROMPTS.md.
+- I will maintain NOTES.md and PROMPTS.md separately.
+- Do not fabricate product claims, reviews, ratings, certifications, ingredients, or other unsupported information.
+
+## 1. Product Images
+
+Review the existing product images and the requirements in README.md/BRAND.md.
+
+Improve the product imagery so that the tea products look professional, consistent, and suitable for a real tea-store website.
+
+Where the assessment explicitly requires professional/generated product images:
+- Create or replace only the required product images.
+- Keep the correct product identity, name, category, and visual representation.
+- Use a consistent visual style across the product collection.
+- Make the images look like professional commercial tea-product photography rather than placeholders.
+- Use clean composition, appropriate lighting, realistic tea packaging/product presentation, and a consistent background style.
+- Do not add unsupported text, fake certifications, fake reviews, fake awards, or misleading claims into the images.
+- Do not change product names, prices, stock values, or other business data simply to make the images easier to create.
+
+If image generation is required, use an appropriate image-generation capability rather than replacing the products with generic stock images.
+
+## 2. Image Quality and Consistency
+
+Check:
+- Product images have consistent aspect ratios.
+- Product cards display images consistently.
+- Images do not appear stretched or distorted.
+- Important parts of the product are not unnecessarily cropped.
+- Image backgrounds and visual treatment are consistent.
+- Product images work correctly in Product Cards and Quick View.
+- Mobile and desktop layouts remain correct.
+
+## 3. Image Performance
+
+Optimize the images for web delivery without visibly degrading their quality.
+
+Where appropriate:
+- Use modern web-friendly image formats such as WebP/AVIF if supported by the project requirements.
+- Resize oversized images to appropriate display dimensions.
+- Avoid unnecessarily large source files.
+- Use appropriate compression.
+- Add explicit width/height or aspect-ratio handling where useful to reduce layout shift.
+- Use lazy loading for below-the-fold product images where appropriate.
+- Do not lazy-load the primary above-the-fold hero image if that would hurt the initial visual experience.
+- Preserve meaningful alt text.
+
+Do not blindly optimize every image. Use appropriate dimensions and loading behavior for how each image is actually used.
+
+## 4. Performance Verification
+
+Check the final image assets for:
+- File size
+- Dimensions
+- Format
+- Visual quality
+- Duplicate/unnecessary assets
+- Whether images are actually referenced by the website
+
+Avoid leaving old unused large image files if they are no longer needed, unless the assessment requires preserving them.
+
+## 5. Accessibility
+
+Preserve/improve:
+- Meaningful alt text for product images.
+- Decorative images should not receive unnecessary descriptive alt text.
+- Existing keyboard accessibility and focus states.
+- Existing Quick View accessibility.
+
+Do not remove accessibility improvements from Prompt 4.
+
+## 6. Responsive Verification
+
+Make sure the new/optimized images work correctly at:
+- 1440px
+- 1024px
+- 768px
+- 390px
+- 375px
+
+Check:
+- No image overflow.
+- No distorted images.
+- No unexpected card height changes.
+- No horizontal scrolling.
+- Product images remain visually consistent.
+
+## 7. Functional Regression Testing
+
+Do NOT break any functionality from previous prompts.
+
+Test:
+- Navbar navigation
+- Search
+- Category filtering
+- Price sorting
+- Combined filtering
+- Quick View
+- Add to Cart
+- Cart badge
+- Cart drawer
+- Quantity controls
+- Maximum quantity of 5
+- Sold-out restriction
+- Remove item
+- Cart persistence
+- Coupon
+- Pincode
+- Add-to-Cart toast
+- View Cart
+- Responsive behavior
+
+Also verify that Quick View displays the correct newly optimized product image.
+
+## 8. Scope Boundary
+
+Do NOT:
+- Redesign the entire website.
+- Change the brand direction.
+- Rewrite the JavaScript architecture.
+- Change product/business data unnecessarily.
+- Implement a new framework.
+- Add SEO/JSON-LD in this phase.
+- Redesign the newsletter.
+- Add unrelated features.
+- Modify the documentation files.
+- Make unsupported marketing claims.
+
+The main purpose of this phase is:
+1. Professional product imagery.
+2. Consistent image presentation.
+3. Image optimization/performance.
+4. Preserve all existing functionality.
+
+## Final Report
+
+After completing the work, report:
+
+1. Files/assets changed.
+2. Which product images were created/replaced.
+3. Image formats and approximate file sizes before/after where available.
+4. Image dimensions/optimization performed.
+5. Lazy-loading or loading changes.
+6. Alt-text/accessibility changes.
+7. Responsive image checks.
+8. Functional regression tests performed.
+9. Browser console status.
+10. Any remaining image/performance issues.]
+
+- Outcome: accepted
+- Why: The AI improved the Mistvale Tea Co. product imagery and image handling while preserving the existing functionality from the previous phases. Product images were reviewed/replaced where required, image presentation was made more consistent, and image loading/performance improvements were applied. Existing shopping, navigation, responsive, accessibility, and visual-design functionality remained intact.

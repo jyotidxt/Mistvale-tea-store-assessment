@@ -144,7 +144,7 @@ html, body {
 
 /* 3. Hero */
 .hero {
-  background: linear-gradient(rgba(31,61,43,0.7), rgba(31,61,43,0.7)), url(images/hero-banner.png) center/cover no-repeat;
+  background: linear-gradient(rgba(31,61,43,0.7), rgba(31,61,43,0.7)), url(images/hero-banner.webp) center/cover no-repeat;
   min-height: 460px;
   padding: 64px 16px;
   display: flex;
@@ -423,7 +423,7 @@ select {
 <!-- 2. Header -->
 <header class="header">
   <div class="wrapper">
-    <img src="images/logo.png" alt="Mistvale Tea Co. Logo">
+    <img src="images/logo.webp" alt="Mistvale Tea Co. Logo" width="160" height="60">
     <nav class="nav" aria-label="Main Navigation">
       <a href="#hero">HOME</a>
       <a href="#shop">SHOP</a>
@@ -675,9 +675,10 @@ function renderProducts(list) {
   for (var i = 0; i < list.length; i++) {
     var p = list[i];
     var isOos = (p.stock === 0);
+    var webpImage = p.image.replace('.png', '.webp');
     html += '<div class="card animate__animated animate__fadeInUp">';
     html += '<i class="fa fa-heart heart" onclick="toggleWish(this)"></i>';
-    html += '<img src="' + p.image + '" onclick="openQuickView(' + p.id + ')" alt="' + p.name + '">';
+    html += '<img src="' + webpImage + '" onclick="openQuickView(' + p.id + ')" alt="' + p.name + '" loading="lazy" width="600" height="600">';
     html += '<h5>' + p.name + '</h5>';
     html += '<div class="stars">' + (p.rating ? '★★★★★ (' + p.reviews + ')' : '☆☆☆☆☆ (0)') + '</div>';
     html += '<div class="desc">' + p.desc + '</div>';
@@ -759,7 +760,8 @@ function openQuickView(id) {
   var p = PRODUCTS.find(function (x) { return x.id === Number(id); });
   if (!p) return;
   var isOos = (p.stock === 0);
-  var html = '<img src="' + p.image + '"><h2>' + p.name + '</h2><p>' + p.desc + '</p>';
+  var webpImage = p.image.replace('.png', '.webp');
+  var html = '<img src="' + webpImage + '" alt="' + p.name + '" width="600" height="600"><h2>' + p.name + '</h2><p>' + p.desc + '</p>';
   html += '<select id="qv-size"><option>100g</option><option>250g</option></select>';
   html += '<p>₹' + p.price.toLocaleString('en-IN') + '</p>';
   if (isOos) {
