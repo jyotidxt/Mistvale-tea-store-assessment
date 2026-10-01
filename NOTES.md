@@ -472,3 +472,825 @@ The following existing functionality was checked after the image/performance cha
 - Professional product imagery: complete for the required scope.
 - Image optimization/performance: complete for the implemented scope.
 - SEO/structured data: not implemented yet.
+
+## 19. SEO + Remaining Assessment Requirements — Prompt 7
+
+After the previous implementation phases, the main website functionality and visual work were already working. The remaining assessment requirements were focused on SEO, structured data, required page sections, and final compliance validation.
+
+### Why Prompt 7 Was Needed
+
+The following areas still required implementation or verification:
+
+- SEO metadata had not yet been completed.
+- Heading structure needed final verification.
+- JSON-LD structured data needed to be implemented/verified.
+- Required page sections needed to be checked against the assessment order.
+- FAQ functionality and accessibility needed verification.
+- Newsletter functionality and accessibility needed verification.
+- Accessibility needed a final regression check.
+- Internal links, duplicate IDs, broken images, JavaScript errors, and other technical issues needed final validation.
+- Existing functionality from Prompts 2–6 needed to be regression tested after the SEO/compliance changes.
+
+### SEO Work
+
+The following SEO requirements were reviewed:
+
+- Page title.
+- Meta description.
+- Viewport metadata.
+- Canonical metadata.
+- Open Graph metadata.
+- Twitter card metadata.
+- OG title and description.
+- OG image where supported.
+- Avoiding duplicate or conflicting metadata.
+- Avoiding invented production URLs.
+
+### Heading Structure
+
+Verified that the page should contain:
+
+- One meaningful H1.
+- Logical H2/H3 hierarchy.
+- No unnecessary duplicate H1 elements.
+
+### Structured Data
+
+JSON-LD was reviewed/implemented for the supported website information:
+
+- Organization / OnlineStore.
+- Product information based on the existing PRODUCTS data.
+- FAQPage where visible FAQ content exists.
+
+The implementation was required to:
+
+- Use actual product information.
+- Avoid fabricated ratings or reviews.
+- Avoid unsupported aggregateRating data.
+- Keep visible FAQ content consistent with FAQ structured data.
+- Use valid JSON-LD.
+- Avoid duplicate or conflicting structured data.
+
+### Required Page Sections
+
+The required page structure was checked against the assessment:
+
+1. Announcement
+2. Header
+3. Hero
+4. Trust Strip
+5. Shop
+6. Delivery Check
+7. Reviews
+8. FAQ Accordion
+9. Newsletter Inline
+10. Footer
+
+Existing brand-supported information was preserved rather than replaced with invented content.
+
+### Accessibility Regression
+
+The following were reviewed:
+
+- Single H1.
+- Semantic HTML.
+- Keyboard navigation.
+- Visible focus states.
+- Form labels.
+- Image alt text.
+- FAQ keyboard interaction.
+- Cart and Quick View accessibility.
+- Toast accessibility.
+- No unnecessary tabindex values.
+
+### Functional Regression
+
+Existing functionality was rechecked after the SEO/compliance changes:
+
+- Navbar navigation.
+- Search.
+- Category filtering.
+- Price sorting.
+- Combined filtering.
+- Quick View.
+- Add to Cart.
+- Cart badge.
+- Cart drawer.
+- Quantity controls.
+- Maximum quantity limit.
+- Sold-out restriction.
+- Remove item.
+- Cart persistence.
+- Coupon.
+- Pincode.
+- Add-to-Cart toast.
+- View Cart.
+- Responsive behavior.
+- Product images.
+- FAQ.
+- Newsletter.
+
+### Technical Validation
+
+The final validation included checking for:
+
+- JavaScript console errors.
+- Broken internal navigation.
+- Broken images.
+- Duplicate IDs.
+- Horizontal overflow.
+- Valid JSON-LD.
+- Correct H1 count.
+- Preservation of PRODUCTS data.
+- Preservation of the API START/END block.
+- No prohibited dependencies.
+- No fabricated claims or unsupported business information.
+
+### Current Status
+
+- Core functionality: complete.
+- Navigation and shopping UX: complete.
+- Responsive improvements: complete.
+- Accessibility improvements: implemented for the current scope.
+- Brand and visual design: complete.
+- Professional product imagery: complete for the implemented scope.
+- SEO and structured-data work: implemented/verified in this phase.
+- Remaining responsive/mobile UX polish: handled in Prompt 7.1.
+
+## 20. Final Responsive UX, SEO Metadata + Assessment Compliance Polish — Prompt 7.1
+
+After Prompt 7, the major functionality and design requirements were already implemented. The remaining work was focused on final responsive/mobile usability and assessment-compliance polish rather than rebuilding the website.
+
+### Why Prompt 7.1 Was Needed
+
+The remaining issues were primarily related to:
+
+- Mobile navigation needing a more usable responsive menu.
+- Mobile header needing to properly accommodate the logo, cart badge, and navigation controls.
+- Cart drawer usability on smaller screens.
+- Quantity +/- controls and Remove controls needing better touch-friendly presentation.
+- Final responsive verification across the required screen sizes.
+- Final verification of SEO metadata and structured data.
+- Final assessment section/order compliance.
+- Final accessibility and technical regression testing.
+
+The goal was to polish these remaining areas without disturbing the functionality already completed in Prompts 2–7.
+
+### Mobile Navigation
+
+The mobile navigation was reviewed and improved to provide:
+
+- Responsive mobile header.
+- Logo visibility.
+- Cart icon and cart badge visibility.
+- Hamburger/menu control.
+- Home navigation.
+- Shop navigation.
+- About navigation.
+- Contact navigation.
+- Keyboard accessibility.
+- Escape-key support where applicable.
+- Closing the menu after navigation.
+
+The existing desktop navigation behavior was preserved.
+
+### Mobile Cart UX
+
+The cart drawer was reviewed for smaller screens.
+
+Improvements focused on:
+
+- Keeping the cart usable within mobile screen dimensions.
+- Making quantity controls easier to tap.
+- Making Remove controls easier to tap.
+- Preserving the existing cart logic.
+- Preserving maximum quantity rules.
+- Preserving sold-out restrictions.
+- Preserving cart persistence.
+- Preserving the Add-to-Cart toast and View Cart behavior.
+
+### Responsive Verification
+
+The implementation was checked against the required viewport sizes:
+
+- 1440px desktop.
+- 1024px.
+- 768px tablet.
+- 390px mobile.
+- 375px mobile.
+
+Particular attention was given to:
+
+- No unwanted horizontal scrolling.
+- Two-column product grid on phones as required by the assessment.
+- Product-card fit and readability.
+- Mobile header.
+- Mobile navigation.
+- Cart drawer.
+- Buttons and touch targets.
+- Hero and section spacing.
+- Forms and controls.
+- Toast positioning.
+- Quick View behavior.
+
+### SEO and Metadata Verification
+
+The final SEO implementation was reviewed against the assessment requirements:
+
+- Title.
+- Meta description.
+- Viewport.
+- Canonical.
+- Open Graph metadata.
+- Twitter metadata.
+- OG title.
+- OG description.
+- OG image where supported.
+- Avoiding invented production URLs.
+- Avoiding duplicate/conflicting metadata.
+
+The assessment/source requirements were used as the basis for deciding which supplied values should remain.
+
+### JSON-LD Verification
+
+Structured data was reviewed for:
+
+- Organization / OnlineStore.
+- Product data.
+- FAQPage.
+
+Checks included:
+
+- Valid JSON.
+- Product data matching the existing PRODUCTS data.
+- Visible FAQ matching FAQ structured data.
+- No fabricated aggregate ratings.
+- No unsupported reviews or claims.
+- No duplicate/conflicting structured data.
+
+### Footer and Brand Information
+
+The supplied Mistvale Tea Co. footer information was preserved.
+
+The following were not unnecessarily removed or replaced:
+
+- Company name.
+- Address.
+- Email.
+- Phone number.
+- Social link information supported by the provided project materials.
+- Existing legal text.
+
+The legal wording was preserved unchanged.
+
+### Accessibility Verification
+
+The final pass reviewed:
+
+- One H1.
+- Semantic navigation.
+- Visible focus states.
+- Keyboard navigation.
+- Mobile menu accessibility.
+- Cart accessibility.
+- Quick View accessibility.
+- Form labels.
+- Image alt text.
+- FAQ accessibility.
+- Toast live/status behavior.
+- Touch-friendly controls.
+- No unnecessary tabindex usage.
+
+### Functional Regression
+
+Previously completed functionality was regression tested:
+
+- Home navigation.
+- Shop navigation.
+- About navigation.
+- Contact navigation.
+- Search.
+- Category filtering.
+- Price sorting.
+- Combined filtering.
+- Quick View.
+- Add to Cart.
+- Add-to-Cart toast.
+- View Cart.
+- Cart badge.
+- Cart drawer.
+- Quantity controls.
+- Maximum quantity of 5.
+- Sold-out restriction.
+- Remove item.
+- Cart persistence.
+- Coupon.
+- Pincode.
+- Product images.
+- FAQ.
+- Newsletter.
+
+### Technical Validation
+
+Final checks included:
+
+- Browser console errors.
+- Broken images.
+- Broken internal navigation.
+- Horizontal overflow.
+- Duplicate IDs.
+- H1 count.
+- JSON-LD validity.
+- PRODUCTS data preservation.
+- API START/END block preservation.
+- Checkout form contract preservation.
+- No prohibited dependencies.
+- No invented production URL.
+- No fabricated product/company claims.
+
+### Current Status
+
+- Core functionality: complete.
+- Navigation and shopping UX: complete.
+- Responsive design: complete for the implemented scope.
+- Mobile navigation: polished.
+- Mobile cart UX: polished.
+- Accessibility: reviewed and preserved.
+- Brand and visual design: complete.
+- Professional product imagery: complete for the implemented scope.
+- SEO metadata: implemented/verified.
+- JSON-LD: implemented/verified.
+- Assessment section/order compliance: reviewed.
+- Final technical and functional regression: completed for the tested scope.
+- Ready for final QA/testing before submission.
+
+## Prompt 7.1 — Final Responsive UX, SEO Metadata + Assessment Compliance Polish
+
+- Tool: [Antigravity]
+- Type: code
+- Prompt:
+
+> [## Prompt 7.1 — Final Responsive UX, SEO Metadata + Assessment Compliance Polish
+
+Work on the existing Mistvale Tea Co. project in the current repository.
+
+This is the FINAL implementation/polish phase before Prompt 8, which will be QA-only.
+
+IMPORTANT:
+- Read README.md and BRAND.md before making any changes.
+- Continue from the current codebase after Prompt 7.
+- Make controlled, targeted changes only.
+- Do NOT rewrite the entire index.html.
+- Preserve all working functionality from Prompts 2–7.
+- Preserve the PRODUCTS data exactly.
+- Preserve the API START/END block exactly.
+- Preserve the required checkout form contract exactly.
+- Do not modify README.md, BRAND.md, NOTES.md, or PROMPTS.md.
+- Do not introduce React, Next.js, Vite, Tailwind, Bootstrap, jQuery, Font Awesome, Animate.css, or other unnecessary dependencies.
+- Do not invent company information, reviews, ratings, certifications, social profiles, URLs, or product claims.
+- Do not change the product grid requirement of 2 columns on phones.
+- Do not perform a complete redesign. Improve polish only where needed.
+
+==================================================
+1. FINAL RESPONSIVE MOBILE UX
+==================================================
+
+Review the website carefully at:
+
+- 1440px desktop
+- 1024px
+- 768px tablet
+- 390px mobile
+- 375px mobile
+
+The assessment expects the product grid to remain 2 columns on phones.
+
+DO NOT change mobile product listing to one column.
+
+Instead, improve the mobile experience around the existing 2-column grid:
+
+- Product cards must fit comfortably within the viewport.
+- No horizontal scrolling.
+- Product names must remain readable.
+- Prices must remain readable.
+- Add to Cart buttons must be easy to tap.
+- Quick View must remain usable.
+- Card spacing must remain clean.
+- Images must not be distorted.
+- No card layout jumps.
+
+==================================================
+2. RESPONSIVE MOBILE NAVIGATION
+==================================================
+
+Improve the mobile header/navigation.
+
+On small screens, do not squeeze:
+
+Home / Shop / About / Contact
+
+into a cramped horizontal row.
+
+Implement a clean mobile navigation pattern such as:
+
+- logo
+- cart icon/badge
+- hamburger/menu button
+
+When the menu is opened, provide clear access to:
+
+- Home
+- Shop
+- About
+- Contact
+
+Requirements:
+
+- clean professional appearance
+- easy touch targets
+- keyboard accessible
+- visible focus state
+- menu can be opened and closed
+- Escape closes the menu where appropriate
+- clicking a navigation item closes the mobile menu
+- navigation still scrolls/navigates to the correct existing sections
+- do not break desktop navigation
+- do not break cart behavior
+
+Do not introduce a large animation.
+
+Use subtle purposeful transitions only.
+
+==================================================
+3. CART UX POLISH
+==================================================
+
+Review the cart drawer specifically on mobile.
+
+Keep the existing cart functionality.
+
+Improve only usability and presentation where needed:
+
+- quantity minus button
+- quantity value
+- quantity plus button
+- Remove action
+- product name
+- price
+- subtotal
+- shipping
+- discount
+- total
+- checkout action
+
+Controls must be:
+
+- easy to tap
+- visually understandable
+- properly aligned
+- not cramped
+- keyboard accessible
+
+Do not rewrite the cart logic.
+
+Do not change:
+- maximum quantity rule
+- sold-out rule
+- coupon rules
+- shipping rules
+- checkout contract
+
+The cart drawer must fit comfortably on mobile screens.
+
+==================================================
+4. ADD-TO-CART FEEDBACK
+==================================================
+
+Preserve the existing toast implementation.
+
+Verify:
+
+- successful Add to Cart gives immediate feedback
+- View Cart action works
+- toast does not cause layout jumping
+- sold-out and maximum-quantity feedback still works
+- cart badge updates immediately
+
+Do not replace working toast behavior with browser alert().
+
+==================================================
+5. HEADER / DESKTOP POLISH
+==================================================
+
+Review the desktop header as well.
+
+Ensure:
+
+- logo is visible
+- navigation is clear
+- search access is clear
+- cart icon is visible
+- cart count badge is visible when applicable
+- spacing is balanced
+- no unnecessary visual clutter
+- no layout shift
+
+Do not redesign the brand.
+
+==================================================
+6. SEO METADATA — VERIFY AGAINST ASSESSMENT SOURCE
+==================================================
+
+Read README.md and BRAND.md and verify the existing SEO metadata.
+
+The assessment requires complete metadata including:
+
+- title
+- meta description
+- viewport
+- canonical
+- Open Graph metadata
+- Twitter Card metadata
+
+Do NOT invent a new production domain.
+
+Do NOT replace the assessment's supplied domain with a made-up domain.
+
+Do NOT blindly remove required metadata.
+
+For:
+
+- canonical
+- og:url
+- twitter:url
+- og:image
+- twitter:image
+
+verify whether the supplied assessment project explicitly expects the existing mistvale.example references.
+
+If the assessment source supports them, preserve them.
+
+If a value is not supported, remove only that unsupported value rather than inventing a replacement.
+
+Keep valid:
+- title
+- description
+- charset
+- viewport
+- og:type
+- og:title
+- og:description
+- og:site_name
+- twitter:card
+- twitter:title
+- twitter:description
+
+Avoid duplicate or conflicting metadata.
+
+==================================================
+7. JSON-LD
+==================================================
+
+Review all JSON-LD.
+
+Required structured data includes:
+
+- Organization and/or OnlineStore
+- Product
+- FAQPage
+
+Verify that the structured data:
+
+- is valid JSON
+- matches visible content
+- matches PRODUCTS data
+- does not invent company information
+- does not invent ratings
+- does not invent review counts
+- does not contain unsupported claims
+
+Do NOT modify PRODUCTS itself.
+
+If rating/review values are not explicitly supported by README.md or BRAND.md, do not expose unsupported rating information through structured data.
+
+Keep product names, descriptions, prices, availability and other supported product information consistent with PRODUCTS.
+
+FAQ JSON-LD must exactly match the visible FAQ.
+
+==================================================
+8. FOOTER — DO NOT REMOVE SUPPLIED BRAND INFORMATION
+==================================================
+
+Keep the supplied Mistvale footer information if it is present in README.md/BRAND.md.
+
+The footer should preserve the approved:
+
+- Mistvale Tea Co.
+- 14 Hill Cart Road, Siliguri, West Bengal 734001
+- hello@mistvale.example
+- +91 90000 12345
+- Instagram link if explicitly supplied
+- approved legal text
+- copyright
+
+Do not invent alternative contact information.
+
+Do not remove supplied brand information.
+
+Do not change the approved legal wording.
+
+==================================================
+9. REQUIRED PAGE STRUCTURE
+==================================================
+
+Preserve the required section order:
+
+1. Announcement
+2. Header
+3. Hero
+4. Trust Strip
+5. Shop
+6. Delivery Check
+7. Reviews
+8. FAQ Accordion
+9. Newsletter Inline
+10. Footer
+
+Do not remove required sections.
+
+Do not add unsupported sections.
+
+==================================================
+10. VISUAL POLISH
+==================================================
+
+The website already has the main visual direction.
+
+Do NOT perform a full redesign.
+
+Only fix obvious remaining UI issues such as:
+
+- awkward spacing
+- cramped mobile controls
+- inconsistent button sizing
+- alignment problems
+- navigation spacing
+- cart control alignment
+- mobile menu presentation
+- unnecessary layout jumps
+- poor touch targets
+- inconsistent responsive spacing
+
+Preserve the existing Mistvale brand:
+
+- tea-green
+- leaf
+- cream
+- parchment
+- saffron
+- ink
+- error
+
+Preserve the approved typography.
+
+Do not introduce:
+
+- marquee
+- blinking text
+- excessive animation
+- transition: all
+- unnecessary decorative effects
+- neon styling
+- unrelated visual themes
+
+==================================================
+11. ACCESSIBILITY
+==================================================
+
+Preserve and improve the existing accessibility work.
+
+Verify:
+
+- exactly one h1
+- semantic navigation
+- visible keyboard focus
+- keyboard-accessible mobile menu
+- keyboard-accessible cart
+- keyboard-accessible Quick View
+- accessible form labels
+- meaningful alt text
+- FAQ keyboard accessibility
+- appropriate ARIA where necessary
+- no unnecessary tabindex
+- adequate touch targets
+- Escape handling for overlays/drawers where appropriate
+
+Do not perform a large unrelated accessibility rewrite.
+
+==================================================
+12. FUNCTIONAL REGRESSION
+==================================================
+
+After making changes, verify:
+
+- Home
+- Shop
+- About
+- Contact
+- mobile navigation
+- search
+- category filtering
+- sorting
+- combined search/filter/sort
+- Quick View
+- Add to Cart
+- cart badge
+- cart drawer
+- quantity controls
+- maximum quantity 5
+- sold-out restriction
+- remove item
+- cart persistence
+- WELCOME10 coupon
+- shipping calculation
+- pincode check
+- Add-to-Cart toast
+- View Cart
+- checkout form behavior
+- newsletter
+- FAQ accordion
+- responsive layouts
+- product images
+
+Do not change working business rules.
+
+==================================================
+13. TECHNICAL VALIDATION
+==================================================
+
+Verify:
+
+- no JavaScript console errors
+- no broken images
+- no broken internal navigation
+- no horizontal overflow
+- valid JSON-LD
+- exactly one h1
+- no duplicate IDs
+- PRODUCTS data unchanged
+- API START/END block unchanged
+- checkout form action/method/required hidden fields unchanged
+- no prohibited dependencies
+- no unsupported company claims
+- no fabricated reviews
+- no fabricated ratings
+- no invented production URL
+
+==================================================
+14. SCOPE BOUNDARY
+==================================================
+
+DO NOT:
+
+- rewrite the whole website
+- rewrite the shopping system
+- change PRODUCTS
+- change product prices
+- change product stock
+- change API code
+- change checkout contract
+- remove required footer information
+- invent contact information
+- invent reviews
+- invent ratings
+- invent social profiles
+- invent a production domain
+- modify documentation files
+- add frameworks
+
+==================================================
+FINAL REPORT
+==================================================
+
+Report:
+
+1. Files changed.
+2. Responsive improvements.
+3. Mobile navigation changes.
+4. Cart UX improvements.
+5. SEO metadata verification/fixes.
+6. JSON-LD verification/fixes.
+7. Footer verification.
+8. Accessibility improvements.
+9. Functional regression results.
+10. Console status.
+11. Any remaining issues.
+
+Be precise.
+
+Do not claim something was fixed unless it was actually changed and verified.
+
+This is the final implementation phase. Prompt 8 will be QA-only, so do not leave known UI/responsive/SEO issues intentionally unresolved if they are within this scope.]
+
+- Outcome: accepted
+- Why: After the main implementation work was completed, the remaining issues were focused on final responsive and mobile UX polish and assessment compliance verification. In particular, the mobile header/menu, mobile cart usability, quantity and Remove controls, responsive behavior across required screen sizes, and final SEO/JSON-LD/compliance details required another targeted pass. Prompt 7.1 was therefore used as a final implementation and polish phase while preserving the already-working shopping, navigation, brand, image, responsive, and accessibility functionality.

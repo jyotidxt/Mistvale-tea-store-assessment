@@ -1509,3 +1509,223 @@ After completing the work, report:
 
 - Outcome: accepted
 - Why: The AI improved the Mistvale Tea Co. product imagery and image handling while preserving the existing functionality from the previous phases. Product images were reviewed/replaced where required, image presentation was made more consistent, and image loading/performance improvements were applied. Existing shopping, navigation, responsive, accessibility, and visual-design functionality remained intact.
+
+## Prompt 7 — SEO + Remaining Assessment Requirements
+
+- Tool: [Antigravity]
+- Type: code
+- Prompt:
+
+> [## Prompt 7 — SEO + Remaining Assessment Requirements
+
+Work on the existing Mistvale Tea Co. project in the current repository.
+
+IMPORTANT:
+- Read README.md and BRAND.md before making changes.
+- Continue from the current codebase after Prompt 6.
+- Make controlled, targeted changes only.
+- Do not rewrite the entire index.html.
+- Preserve all working functionality from Prompts 2–6.
+- Do not modify the PRODUCTS data contract.
+- Do not modify the API START/END block.
+- Do not introduce React, Next.js, Vite, Tailwind, Bootstrap, jQuery, Font Awesome, Animate.css, or other prohibited/unnecessary dependencies.
+- Keep the existing single-page HTML architecture.
+- Do not modify README.md, BRAND.md, NOTES.md, or PROMPTS.md.
+- Do not fabricate company facts, reviews, ratings, certifications, product claims, or FAQ information.
+- Use only information supported by README.md, BRAND.md, and the existing page content.
+
+## 1. SEO Metadata
+
+Review the existing <head> and implement/fix the required SEO metadata.
+
+Verify:
+- Meaningful <title>.
+- Accurate meta description.
+- Appropriate viewport metadata.
+- Canonical URL.
+- Open Graph metadata.
+- Twitter card metadata.
+- Appropriate og:title, og:description, og:type, and og:image where supported by the existing project.
+- Avoid duplicate or conflicting metadata.
+- Do not invent URLs or social profiles.
+
+Use the correct production/deployment URL only if it is explicitly provided by the assessment/project. Otherwise, do not invent one.
+
+## 2. Heading Structure
+
+Review the page heading hierarchy.
+
+Requirements:
+- Exactly one meaningful <h1>.
+- Use <h2>/<h3> logically for sections and subsections.
+- Do not change visible copy unnecessarily.
+- Do not hide duplicate headings only to satisfy the requirement.
+
+## 3. JSON-LD Structured Data
+
+Implement valid structured data using JSON-LD where required by the assessment.
+
+Include the appropriate schemas supported by the provided project information:
+
+- Organization and/or OnlineStore
+- Product
+- FAQPage
+
+Important:
+- Use actual product information from the existing PRODUCTS data.
+- Do not invent product ratings or reviews.
+- Do not add fake aggregateRating data.
+- Do not invent company information.
+- FAQ structured data must match the actual visible FAQ content.
+- Product structured data must match the visible product information.
+- Ensure JSON-LD is valid JSON.
+- Avoid duplicate/conflicting structured data.
+
+If a required field cannot be truthfully populated from the project information, do not invent it. Use the appropriate valid structure supported by the available information.
+
+## 4. Required Page Sections
+
+Compare the current page against the required section order from README.md/BRAND.md.
+
+The required order is:
+
+1. Announcement
+2. Header
+3. Hero
+4. Trust Strip
+5. Shop
+6. Delivery Check
+7. Reviews
+8. FAQ Accordion
+9. Newsletter Inline
+10. Footer
+
+Verify whether these sections already exist after the previous prompts.
+
+If any required section is missing:
+- Implement only what is explicitly required by the source files.
+- Preserve the existing visual design.
+- Do not invent unsupported company facts, testimonials, reviews, statistics, certifications, or claims.
+- Keep the section order correct.
+
+If a required section already exists and works correctly, do not unnecessarily rewrite it.
+
+## 5. FAQ
+
+If FAQ content is required:
+- Ensure the FAQ accordion works.
+- Ensure it is keyboard accessible.
+- Ensure the visible FAQ questions/answers match the FAQPage JSON-LD.
+- Do not create unsupported answers.
+
+## 6. Newsletter
+
+If the assessment requires the newsletter section:
+- Keep it inline on the page.
+- Preserve its existing functionality.
+- Ensure its form has accessible labels/names.
+- Do not add an unrelated popup.
+- Do not change it into an unrelated feature.
+
+## 7. Accessibility Regression Check
+
+Preserve the accessibility work from Prompt 4.
+
+Check:
+- Single H1.
+- Semantic HTML.
+- Visible focus states.
+- Keyboard navigation.
+- Accessible form controls.
+- Meaningful alt text.
+- Accessible FAQ controls.
+- Cart and Quick View accessibility.
+- No unnecessary tabindex values.
+- Sufficient color contrast where possible.
+
+Do not perform a completely unrelated accessibility rewrite.
+
+## 8. Functional Regression Testing
+
+Do not break any existing functionality.
+
+Test:
+- Home navigation
+- Shop navigation
+- About navigation
+- Contact navigation
+- Search
+- Category filtering
+- Price sorting
+- Combined filtering
+- Quick View
+- Add to Cart
+- Cart badge
+- Cart drawer
+- Quantity controls
+- Maximum quantity of 5
+- Sold-out restriction
+- Remove item
+- Cart persistence
+- Coupon
+- Pincode
+- Add-to-Cart toast
+- View Cart
+- Responsive layouts
+- Product images
+- FAQ accordion
+- Newsletter form
+
+## 9. Technical Validation
+
+Check:
+- Browser console has no JavaScript errors.
+- JSON-LD contains valid JSON.
+- No duplicate IDs introduced.
+- No broken internal links.
+- No broken image references.
+- No horizontal overflow at mobile widths.
+- Existing product data remains unchanged.
+- API START/END block remains unchanged.
+
+If available in the current environment, use an appropriate structured-data/HTML validation method to check the implementation. Do not claim external validation if it was not actually performed.
+
+## 10. Scope Boundary
+
+Do NOT:
+- Redesign the entire website.
+- Change the brand direction.
+- Rewrite the shopping/cart architecture.
+- Change product prices/names/stock.
+- Change the API contract.
+- Add unsupported marketing claims.
+- Add fake reviews or ratings.
+- Add fake structured-data values.
+- Introduce a framework.
+- Modify documentation files.
+
+The purpose of this phase is:
+1. Complete/fix SEO metadata.
+2. Add/fix required structured data.
+3. Verify the required section structure.
+4. Ensure FAQ/Newsletter requirements are satisfied.
+5. Preserve accessibility and all previous functionality.
+
+## Final Report
+
+After completing the work, report:
+
+1. Files changed.
+2. SEO metadata added/fixed.
+3. Canonical/Open Graph/Twitter changes.
+4. JSON-LD schemas added/fixed.
+5. Heading structure changes.
+6. Required sections added/fixed, if any.
+7. FAQ/Newsletter changes.
+8. Accessibility checks.
+9. Functional regression tests.
+10. Browser console status.
+11. Any remaining assessment requirements or limitations.]
+
+- Outcome: accepted
+- Why: The main shopping, navigation, responsive, accessibility, brand, and product-image functionality was already implemented in the previous phases. Prompt 7 was created to complete the remaining assessment requirements, especially SEO metadata, heading structure, JSON-LD structured data, required page sections, FAQ, newsletter, accessibility regression checks, and final technical validation. The prompt was intentionally limited to these remaining requirements so that the already-working functionality was not unnecessarily rewritten.
