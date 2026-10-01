@@ -2,11 +2,11 @@
 
 ## Prompt 1 — Full Codebase Audit
 
-- Tool: [Antigravity]
+- Tool: Antigravity
 - Type: code
 - Prompt:
 
-> [You are working on the MeroxIO Web Developer Assessment: “Rescue the Mistvale tea store”.
+> You are working on the MeroxIO Web Developer Assessment: “Rescue the Mistvale tea store”.
 
 IMPORTANT: This is a hiring assessment. Follow the provided README.md and BRAND.md as the source of truth. Do not guess requirements or invent business facts.
 
@@ -283,18 +283,18 @@ For each observation:
 
 Also identify any important bugs from the README requirements that I have not manually discovered yet.
 
-Do not modify index.html during this audit.]
+Do not modify index.html during this audit.
 
 - Outcome: accepted
 - Why: The AI completed the requested audit without modifying index.html and verified the manually observed issues.
 
 ## Prompt 2 — Core Functional Fixes
 
-- Tool: [Antigravity]
+- Tool: Antigravity
 - Type: code
 - Prompt:
 
-> [## Prompt 2 — Core Functional Fixes
+> Prompt 2 — Core Functional Fixes
 
 Now implement only the core functional fixes identified during the audit.
 
@@ -474,18 +474,18 @@ Then provide:
 7. Any remaining functional issues
 8. A concise summary of exactly what you changed
 
-Do not modify anything outside this scope.]
+Do not modify anything outside this scope.
 
 - Outcome: accepted
 - Why: The AI implemented the requested core functional fixes in `index.html`, including cart initialization, Add to Cart, quantity handling, search, sorting, Quick View, combined filtering, and pincode error handling. I manually verified the main shopping flows and found them working.
 
 ## Prompt 3 — Navigation + Shopping UX Improvements
 
-- Tool: [Antigravity]
+- Tool: Antigravity
 - Type: code
 - Prompt:
 
-> [## Prompt 3 — Navigation + Shopping UX Improvements
+> Prompt 3 — Navigation + Shopping UX Improvements
 
 Now improve the existing website's navigation and shopping UX based on the audit and the manual testing I completed after Prompt 2.
 
@@ -657,18 +657,18 @@ Then report:
 9. Confirm that Prompt 2 functionality was not broken
 10. Concise summary of exactly what changed
 
-Do not modify anything outside this scope.]
+Do not modify anything outside this scope.
 
 - Outcome: accepted
 - Why: The AI implemented the requested navigation and shopping UX improvements. Navbar links now navigate to the existing page sections, Add to Cart provides immediate toast feedback with a View Cart action, and cart/accessibility behavior was improved. Prompt 2 functionality remained intact and browser testing reported zero JavaScript errors.
 
 ## Prompt 4 — Responsive Design + Accessibility
 
-- Tool: [Antigravity]
+- Tool: Antigravity
 - Type: code
 - Prompt:
 
-> [## Prompt 4 — Responsive Design + Accessibility
+> Prompt 4 — Responsive Design + Accessibility
 
 Now improve the existing `index.html` for responsive behavior and accessibility.
 
@@ -959,18 +959,18 @@ Then report:
 10. Any remaining responsive/accessibility issues
 11. Concise summary of exactly what changed
 
-Do not modify anything outside this scope.]
+Do not modify anything outside this scope.
 
 - Outcome: accepted
 - Why: The AI implemented responsive layout and targeted accessibility improvements while preserving the existing cart, search, filtering, sorting, Quick View, navigation, and Add-to-Cart functionality.
 
 ## Prompt 5 — Brand + Visual Design
 
-- Tool: [Antigravity]
+- Tool: Antigravity
 - Type: code
 - Prompt:
 
-> [## Prompt 5 — Brand + Visual Design
+> Prompt 5 — Brand + Visual Design
 
 Now improve the visual design of the existing Mistvale Tea Co. website according to the requirements already provided in `BRAND.md` and `README.md`.
 
@@ -1301,18 +1301,17 @@ Then report:
 12. Any remaining visual/brand issues
 13. Concise summary of exactly what changed
 
-Do not modify anything outside this scope.]
-
+Do not modify anything outside this scope.
 - Outcome: accepted
 - Why: The AI improved the visual design of the Mistvale Tea Co. website according to the existing brand requirements while preserving the functionality implemented in the previous phases. The navbar, hero section, product section, buttons, controls, typography, spacing, and overall visual hierarchy were improved. Existing shopping, navigation, responsive, and accessibility functionality was preserved. A follow-up fix was also made to restore visibility of the navbar cart icon after the visual changes.
 
 ### Prompt 5.1 — Cart Icon Visibility Fix
 
-- Tool: [Antigravity]
+- Tool: Antigravity
 - Type: code
 - Prompt:
 
-> [## Small Fix — Cart Icon Visibility
+> Small Fix — Cart Icon Visibility
 
 In the existing `index.html`, fix only the issue where the cart icon/button in the navbar is not visually visible after the Prompt 5 brand/visual design changes.
 
@@ -1334,18 +1333,19 @@ After making the fix:
 4. Check desktop and mobile.
 5. Check the browser console for JavaScript errors.
 
-Report exactly what CSS/HTML was changed.]
+Report exactly what CSS/HTML was changed.
 
 - Outcome: accepted
 - Why: The navbar cart icon was not visible after the visual design changes. The AI fixed the visibility issue while preserving cart functionality, cart badge behavior, and the existing navbar design.
 
 ## Prompt 6 — Professional Product Images + Image Performance
 
-- Tool: [Antigravity]
+- Tool: Antigravity
+- Model: [Gemini 3.5 flash] 
 - Type: code + image/performance
 - Prompt:
 
-> [## Prompt 6 — Professional Product Images + Image Performance
+> Prompt 6 — Professional Product Images + Image Performance
 
 Work on the existing Mistvale Tea Co. project in the current repository.
 
@@ -1505,18 +1505,18 @@ After completing the work, report:
 7. Responsive image checks.
 8. Functional regression tests performed.
 9. Browser console status.
-10. Any remaining image/performance issues.]
+10. Any remaining image/performance issues.
 
 - Outcome: accepted
 - Why: The AI improved the Mistvale Tea Co. product imagery and image handling while preserving the existing functionality from the previous phases. Product images were reviewed/replaced where required, image presentation was made more consistent, and image loading/performance improvements were applied. Existing shopping, navigation, responsive, accessibility, and visual-design functionality remained intact.
 
 ## Prompt 7 — SEO + Remaining Assessment Requirements
 
-- Tool: [Antigravity]
+- Tool: Antigravity
 - Type: code
 - Prompt:
 
-> [## Prompt 7 — SEO + Remaining Assessment Requirements
+> Prompt 7 — SEO + Remaining Assessment Requirements
 
 Work on the existing Mistvale Tea Co. project in the current repository.
 
@@ -1725,7 +1725,366 @@ After completing the work, report:
 8. Accessibility checks.
 9. Functional regression tests.
 10. Browser console status.
-11. Any remaining assessment requirements or limitations.]
-
+11. Any remaining assessment requirements or limitations.
 - Outcome: accepted
 - Why: The main shopping, navigation, responsive, accessibility, brand, and product-image functionality was already implemented in the previous phases. Prompt 7 was created to complete the remaining assessment requirements, especially SEO metadata, heading structure, JSON-LD structured data, required page sections, FAQ, newsletter, accessibility regression checks, and final technical validation. The prompt was intentionally limited to these remaining requirements so that the already-working functionality was not unnecessarily rewritten.
+
+## Prompt 8 — Final QA + Submission Readiness
+
+- Tool: Antigravity
+- Type: testing / QA
+- Prompt:
+
+> Prompt 8 — Final QA + Submission Readiness
+
+Perform the final QA and submission-readiness review of the existing Mistvale Tea Co. assessment project.
+
+IMPORTANT:
+- Read README.md and BRAND.md before testing.
+- Continue from the current codebase after Prompt 7.1.
+- This is the final QA phase.
+- Do NOT rewrite the project.
+- Do NOT make broad redesigns or refactors.
+- Do NOT change working functionality just for stylistic preference.
+- Preserve all functionality implemented in Prompts 2–7.1.
+- Do not modify the PRODUCTS data contract.
+- Do not modify the API START/END block.
+- Do not modify the required checkout form contract.
+- Do not introduce React, Next.js, Vite, Tailwind, Bootstrap, jQuery, Font Awesome, Animate.css, or other prohibited/unnecessary dependencies.
+- Do not modify README.md, BRAND.md, NOTES.md, or PROMPTS.md.
+- Do not fabricate test results.
+- Do not claim something was tested if it was not actually tested.
+- Do not invent URLs, company information, reviews, ratings, certifications, or product claims.
+- Do not make unnecessary code changes during this phase.
+
+## 1. Full Functional QA
+
+Test the complete customer journey from page load to cart/checkout.
+
+Verify:
+
+- Page loads without JavaScript errors.
+- Hero CTA works.
+- Home navigation works.
+- Shop navigation works.
+- About navigation works.
+- Contact navigation works.
+- Search works.
+- Category filtering works.
+- Price sorting Low → High works.
+- Price sorting High → Low works.
+- Combined search + category + sorting works.
+- Quick View opens the correct product.
+- Quick View closes correctly.
+- Add to Cart works.
+- Add-to-Cart success toast appears.
+- View Cart from toast works.
+- Cart badge updates correctly.
+- Cart drawer opens and closes correctly.
+- Quantity + works.
+- Quantity - works.
+- Remove item works.
+- Cart persists after refresh.
+- Maximum quantity of 5 is enforced.
+- Sold-out products cannot be added.
+- Coupon behavior follows the assessment rules.
+- Pincode/delivery check works according to the provided API.
+- Checkout form behaves according to the provided assessment contract.
+- Newsletter interaction works.
+- FAQ accordion works.
+
+## 2. Business Rule QA
+
+Verify the implementation against README.md and the provided assessment requirements.
+
+Check:
+
+- Product prices come from the PRODUCTS data.
+- Product IDs remain consistent.
+- Stock rules work.
+- Maximum quantity of 5 works.
+- Sold-out products remain unavailable.
+- WELCOME10 behavior is correct.
+- Coupon minimum order requirement is correct.
+- Coupon exclusion rules are correct.
+- Coupon discount cap is correct.
+- Coupon cannot be incorrectly accumulated.
+- Shipping threshold is calculated using the correct discounted subtotal rule.
+- Indian Rupee formatting is correct.
+- Sold-out products are handled correctly in sorting and cart behavior.
+
+Do not change business rules unless a clear implementation bug is found.
+
+## 3. Responsive QA
+
+Check the page at:
+
+- 1440px desktop
+- 1024px
+- 768px tablet
+- 390px mobile
+- 375px mobile
+
+Verify:
+
+- No horizontal scrolling.
+- Header fits correctly.
+- Desktop navigation works.
+- Mobile hamburger/menu works.
+- Mobile menu contains Home, Shop, About, Contact.
+- Mobile menu opens and closes correctly.
+- Escape closes the menu where implemented.
+- Cart badge remains visible.
+- Cart drawer fits the viewport.
+- Quantity and Remove controls are usable on touch screens.
+- Product grid remains TWO COLUMNS ON PHONES as required by the assessment.
+- Product cards do not overflow.
+- Product images are not distorted.
+- Hero does not overflow.
+- Forms fit correctly.
+- Toast does not overflow or cover important controls.
+- Quick View works on mobile.
+- FAQ works on mobile.
+- Footer fits correctly.
+
+## 4. Accessibility QA
+
+Verify:
+
+- Exactly one H1.
+- Logical heading hierarchy.
+- Semantic navigation.
+- Visible keyboard focus.
+- Keyboard navigation for important controls.
+- Mobile menu keyboard accessibility.
+- Cart keyboard accessibility.
+- Quick View keyboard accessibility.
+- Escape behavior where applicable.
+- FAQ keyboard accessibility.
+- Form controls have accessible labels/names.
+- Images have appropriate alt text.
+- Toast uses an appropriate live/status announcement.
+- Buttons/interactive controls are actually keyboard/touch usable.
+- No unnecessary tabindex values.
+- No obvious contrast/accessibility regressions caused by the recent changes.
+
+## 5. SEO QA
+
+Inspect the final HTML and verify:
+
+- Meaningful title.
+- Accurate meta description.
+- Viewport metadata.
+- Canonical metadata according to the assessment/source requirements.
+- Open Graph metadata.
+- Twitter metadata.
+- OG title.
+- OG description.
+- OG image where supported.
+- No duplicate/conflicting metadata.
+- No invented production URL.
+
+Do not change SEO values simply because a real deployment URL is not available.
+
+## 6. JSON-LD QA
+
+Inspect every JSON-LD block.
+
+Verify:
+
+- Valid JSON.
+- Organization/OnlineStore data where required.
+- Product structured data matches PRODUCTS.
+- FAQPage structured data matches visible FAQ content.
+- No fake aggregateRating.
+- No unsupported reviews or claims.
+- No duplicate/conflicting structured data.
+
+Do not invent missing information.
+
+## 7. Required Page Structure
+
+Verify the required page order:
+
+1. Announcement
+2. Header
+3. Hero
+4. Trust Strip
+5. Shop
+6. Delivery Check
+7. Reviews
+8. FAQ Accordion
+9. Newsletter Inline
+10. Footer
+
+Verify that required sections are visible and functional.
+
+## 8. Images and Performance QA
+
+Verify:
+
+- Product images load correctly.
+- Correct product image appears in Quick View.
+- No broken image paths.
+- No distorted images.
+- Image dimensions/aspect ratios prevent unnecessary layout shift.
+- Appropriate below-the-fold images use lazy loading where implemented.
+- Important above-the-fold imagery is not unnecessarily lazy-loaded.
+- No obviously unused large image assets remain if they were replaced.
+- No unnecessary external libraries were introduced.
+
+Do not replace images during this phase unless there is a critical broken-image issue.
+
+## 9. Brand and Content QA
+
+Verify the implementation still follows BRAND.md.
+
+Check:
+
+- Brand colors.
+- Typography.
+- Spacing.
+- Visual hierarchy.
+- Button styling.
+- Product card styling.
+- Header styling.
+- Hero styling.
+- Footer styling.
+- No excessive animation.
+- No marquee/blinking effects.
+- No unsupported marketing claims.
+- No fabricated ratings/reviews/certifications.
+- Supplied legal text remains unchanged.
+
+## 10. Technical QA
+
+Inspect the final source for:
+
+- JavaScript errors.
+- Unhandled promise errors.
+- Broken internal links.
+- Broken image references.
+- Duplicate IDs.
+- Invalid HTML patterns that affect functionality.
+- Unnecessary dependencies.
+- Accidental debug code.
+- Accidental console logging.
+- Accidental placeholder text.
+- Accidental test content.
+- PRODUCTS data changes.
+- API START/END block changes.
+- Checkout form action/method changes.
+
+## 11. Final Regression Test
+
+Run the complete regression flow one final time:
+
+1. Load page.
+2. Navigate through Home / Shop / About / Contact.
+3. Search for a product.
+4. Apply a category.
+5. Apply price sorting.
+6. Use Quick View.
+7. Add an available product.
+8. Verify toast.
+9. Open cart.
+10. Change quantity.
+11. Remove an item.
+12. Refresh and verify persistence.
+13. Test maximum quantity.
+14. Test sold-out product.
+15. Test coupon.
+16. Test pincode.
+17. Test FAQ.
+18. Test newsletter.
+19. Test mobile menu.
+20. Test mobile cart.
+21. Check console.
+22. Check responsive layouts.
+
+## 12. Changes During Final QA
+
+Do NOT make changes unless a clear critical regression or broken assessment requirement is discovered.
+
+If you find a critical issue:
+- Make the smallest targeted fix possible.
+- Do not refactor unrelated code.
+- Re-test the affected functionality.
+- Report exactly what was changed and why.
+
+If everything passes:
+- Make NO code changes.
+
+## 13. Final Report
+
+Provide a concise but complete final QA report containing:
+
+### A. Overall Status
+- PASS / PASS WITH MINOR ISSUES / BLOCKED
+
+Do not mark PASS unless the tested requirements actually pass.
+
+### B. Functional Tests
+List each major test and result.
+
+### C. Business Rules
+List each important business rule and result.
+
+### D. Responsive Tests
+Report results for:
+- 1440px
+- 1024px
+- 768px
+- 390px
+- 375px
+
+### E. Accessibility
+Report verified items and any remaining issues.
+
+### F. SEO
+Report:
+- Title
+- Description
+- Viewport
+- Canonical
+- Open Graph
+- Twitter
+
+### G. JSON-LD
+Report:
+- Organization/OnlineStore
+- Product
+- FAQPage
+- Validation result
+
+### H. Images
+Report:
+- Product image status
+- Broken images
+- Responsive behavior
+- Loading/performance observations
+
+### I. Console
+Report whether JavaScript errors remain.
+
+### J. Assessment Compliance
+Report whether the implementation satisfies the important README/assessment requirements.
+
+### K. Remaining Issues
+List only real remaining issues.
+Do not invent issues.
+
+### L. Files Changed During Final QA
+If no files were changed, explicitly state:
+"No code changes were required during final QA."
+
+The final report must clearly distinguish:
+- Tested and passed
+- Tested and failed
+- Not testable in the current environment
+- Not applicable
+
+Do not fabricate successful results.
+
+- Outcome: accepted
+- Why: The final QA phase was used to verify that the complete Mistvale Tea Co. assessment was ready for submission. The website was tested across the main shopping flow, business rules, responsive layouts, accessibility, SEO, JSON-LD, images, brand requirements, technical behavior, and assessment requirements. No unnecessary redesign or refactoring was performed during this phase, and the final implementation was verified against the assessment requirements.

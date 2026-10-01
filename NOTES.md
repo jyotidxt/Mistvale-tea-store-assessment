@@ -1294,3 +1294,247 @@ This is the final implementation phase. Prompt 8 will be QA-only, so do not leav
 
 - Outcome: accepted
 - Why: After the main implementation work was completed, the remaining issues were focused on final responsive and mobile UX polish and assessment compliance verification. In particular, the mobile header/menu, mobile cart usability, quantity and Remove controls, responsive behavior across required screen sizes, and final SEO/JSON-LD/compliance details required another targeted pass. Prompt 7.1 was therefore used as a final implementation and polish phase while preserving the already-working shopping, navigation, brand, image, responsive, and accessibility functionality.
+
+## 21. Final QA + Submission Readiness — Prompt 8
+
+The final QA phase was performed after the implementation and polish work from Prompts 1–7.1.
+
+The purpose of this phase was to verify the complete website before submission rather than introduce another major implementation or redesign.
+
+### Final QA Scope
+
+The final review covered:
+
+- Complete customer shopping flow.
+- Business rules.
+- Navigation.
+- Search.
+- Filtering.
+- Sorting.
+- Quick View.
+- Add to Cart.
+- Cart drawer.
+- Quantity controls.
+- Remove item.
+- Cart persistence.
+- Coupon.
+- Pincode/delivery check.
+- Add-to-Cart toast.
+- View Cart.
+- FAQ.
+- Newsletter.
+- Responsive layouts.
+- Mobile navigation.
+- Accessibility.
+- SEO metadata.
+- JSON-LD structured data.
+- Product images.
+- Brand requirements.
+- Technical implementation.
+- Assessment compliance.
+
+### Functional QA
+
+The following flows were checked:
+
+- Page loads correctly.
+- Home navigation works.
+- Shop navigation works.
+- About navigation works.
+- Contact navigation works.
+- Search works.
+- Category filtering works.
+- Price sorting works.
+- Combined filtering works.
+- Quick View works.
+- Add to Cart works.
+- Add-to-Cart toast works.
+- View Cart works.
+- Cart badge updates correctly.
+- Cart drawer works.
+- Quantity controls work.
+- Remove item works.
+- Cart persistence works after refresh.
+- Maximum quantity of 5 is enforced.
+- Sold-out products cannot be added.
+- Coupon behavior follows the assessment rules.
+- Pincode/delivery behavior works according to the provided API.
+- FAQ works.
+- Newsletter works.
+
+### Business Rule QA
+
+The important business rules were reviewed, including:
+
+- Product prices use the PRODUCTS data.
+- Product IDs remain consistent.
+- Stock restrictions work.
+- Maximum quantity of 5 is enforced.
+- Sold-out products remain unavailable.
+- WELCOME10 follows the required rules.
+- Coupon restrictions are applied correctly.
+- Shipping threshold behavior follows the assessment requirements.
+- Indian Rupee formatting is correct.
+- Sold-out products are handled correctly in cart and sorting behavior.
+
+### Responsive QA
+
+The website was checked at the required viewport sizes:
+
+- 1440px desktop.
+- 1024px.
+- 768px tablet.
+- 390px mobile.
+- 375px mobile.
+
+The review included:
+
+- Header.
+- Desktop navigation.
+- Mobile hamburger/menu.
+- Cart badge.
+- Cart drawer.
+- Product cards.
+- Two-column product grid on phones.
+- Hero section.
+- Forms.
+- Toast.
+- Quick View.
+- FAQ.
+- Footer.
+- Horizontal overflow.
+
+### Accessibility QA
+
+The final accessibility review included:
+
+- Single H1.
+- Logical heading hierarchy.
+- Semantic navigation.
+- Visible focus states.
+- Keyboard navigation.
+- Mobile menu accessibility.
+- Cart accessibility.
+- Quick View accessibility.
+- FAQ keyboard interaction.
+- Form labels.
+- Image alt text.
+- Toast live/status behavior.
+- Touch-friendly controls.
+- Avoiding unnecessary tabindex values.
+
+### SEO QA
+
+The final SEO implementation was reviewed for:
+
+- Page title.
+- Meta description.
+- Viewport metadata.
+- Canonical metadata.
+- Open Graph metadata.
+- Twitter metadata.
+- OG title.
+- OG description.
+- OG image where supported.
+- Duplicate/conflicting metadata.
+- Production URL handling.
+
+### JSON-LD QA
+
+The structured data was reviewed for:
+
+- Organization / OnlineStore.
+- Product.
+- FAQPage.
+- Valid JSON.
+- Product information matching PRODUCTS.
+- FAQ content matching the visible FAQ.
+- No fabricated aggregate ratings.
+- No unsupported reviews or claims.
+- No duplicate/conflicting structured data.
+
+### Image QA
+
+The final product imagery was checked for:
+
+- Correct product images.
+- Correct Quick View images.
+- Broken image paths.
+- Image distortion.
+- Responsive behavior.
+- Appropriate loading behavior.
+- Product-card layout stability.
+
+### Brand and Content QA
+
+The final implementation was reviewed against BRAND.md.
+
+Checked areas included:
+
+- Brand colors.
+- Typography.
+- Spacing.
+- Visual hierarchy.
+- Buttons.
+- Product cards.
+- Header.
+- Hero.
+- Footer.
+- Animation usage.
+- Unsupported marketing claims.
+- Product/company information.
+- Legal text.
+
+### Technical QA
+
+The final source was checked for:
+
+- JavaScript errors.
+- Broken internal links.
+- Broken images.
+- Duplicate IDs.
+- Unnecessary dependencies.
+- Debug/test content.
+- PRODUCTS data preservation.
+- API START/END block preservation.
+- Checkout form contract preservation.
+- Assessment-required behavior.
+
+### Final Regression
+
+The complete customer journey was tested from page load through shopping/cart interactions.
+
+The previously implemented functionality from Prompts 2–7.1 was regression tested to ensure that the final responsive, SEO, and compliance work did not break the existing website.
+
+### Final Status
+
+- Core functionality: PASS (Cart, stock limits, quantity caps, search, filtering, sorting, pincode check, coupon rules, and checkout form contract working cleanly)
+- Navigation and shopping UX: PASS (Smooth anchor scrolling, Quick View modal, cart drawer slider, and non-blocking toast notifications)
+- Responsive behavior: PASS (Fluid layouts from 1440px desktop down to 375px mobile, 2-column mobile product grid maintained, zero horizontal overflow)
+- Mobile navigation: PASS (Hamburger toggle button with slide-out drawer menu, overlay backdrop, touch targets ≥ 44px, and auto-close on link/Escape)
+- Accessibility: PASS (Single H1 tag, logical heading hierarchy, semantic nav, visible focus rings, ARIA dialog/status roles, and keyboard navigation)
+- Brand/visual design: PASS (Fraunces & Inter typography, Mistvale color palette, card styling, Trust Strip, inline newsletter, and footer)
+- Product imagery: PASS (High-quality WebP images for logo, hero banner, and all 8 products, responsive object-fit contain, lazy loading enabled)
+- SEO: PASS (Title tag, meta description, viewport, canonical URL, Open Graph, and Twitter Cards with https://mistvale.example)
+- JSON-LD: PASS (Valid OnlineStore, ItemList with 8 Product items, and FAQPage schemas with zero syntax errors)
+- Assessment compliance: PASS (Single HTML file, vanilla JS, zero prohibited libraries, preserved PRODUCTS data and API block)
+- Browser console: CLEAN (0 errors, 0 warnings, 0 unhandled promise rejections)
+
+### Final QA Result
+
+Overall Status:PASS
+
+The codebase strictly adheres to all functional, business rule, responsive, accessibility, SEO, performance, and assessment requirements specified in README.md and BRAND.md.
+
+### Code Changes During Final QA
+
+No code changes were required during final QA.
+
+
+
+## Final QA & Submission Readiness Report
+Project: Mistvale Tea Co. — Web Developer Assessment
+Repository: Mistvale-tea-store-assessment
+Target File: index.html
+Execution Date: October 1, 2026
+Submitted By: Jyoti Dixit
