@@ -479,3 +479,185 @@ Do not modify anything outside this scope.]
 - Outcome: accepted
 - Why: The AI implemented the requested core functional fixes in `index.html`, including cart initialization, Add to Cart, quantity handling, search, sorting, Quick View, combined filtering, and pincode error handling. I manually verified the main shopping flows and found them working.
 
+## Prompt 3 — Navigation + Shopping UX Improvements
+
+- Tool: [Antigravity]
+- Type: code
+- Prompt:
+
+> [## Prompt 3 — Navigation + Shopping UX Improvements
+
+Now improve the existing website's navigation and shopping UX based on the audit and the manual testing I completed after Prompt 2.
+
+IMPORTANT:
+- Work on the existing `index.html`.
+- Make targeted, minimal changes.
+- Do NOT rewrite the entire file.
+- Preserve the existing `PRODUCTS` data exactly.
+- Do not change the provided API START/END block.
+- Do not add React, Next.js, Vite, Tailwind, Bootstrap, jQuery, or other frameworks/libraries.
+- Keep the required single HTML file.
+- Do not modify README.md or BRAND.md.
+- Do not create or modify NOTES.md or PROMPTS.md.
+- Do not fabricate product information, reviews, ratings, claims, or business data.
+- Preserve all functionality already fixed in Prompt 2.
+- Do not break cart, search, filtering, sorting, Quick View, coupon, stock, or pincode functionality.
+- Do not start the full visual redesign yet. That will be handled in a later phase.
+
+## 1. Navbar Navigation
+
+The current navbar links for:
+
+- Home
+- Shop
+- About
+- Contact
+
+do not provide useful navigation.
+
+Fix them using the existing page sections/content.
+
+Requirements:
+- Home should take the user to the top/hero section.
+- Shop should take the user to the tea/product section.
+- About should take the user to the existing About section.
+- Contact should take the user to the existing Contact section.
+- Do not invent new content just to create navigation targets.
+- Use appropriate semantic links/buttons where applicable.
+- Make sure navigation works when clicked.
+- Preserve the existing visual design for now as much as possible.
+
+## 2. Add-to-Cart Feedback
+
+During manual testing, Add to Cart works correctly, but there is no immediate visual confirmation.
+
+Currently:
+- The cart badge updates.
+- The user has to scroll back to the navbar/cart icon to notice that the product was added.
+
+Improve this UX.
+
+When a product is successfully added:
+- Show a small, professional success notification/toast near the user.
+- Example meaning: "Darjeeling Tea added to cart."
+- The message should be temporary and disappear automatically.
+- It may include a small "View Cart" action if that fits the existing implementation.
+- Do NOT use a browser `alert()` for successful Add to Cart.
+- Do not make the notification block the page or require the user to close it.
+- Do not cause the product card or page layout to jump.
+- Make sure repeated Add to Cart actions do not create a broken stack of notifications.
+
+For unsuccessful actions:
+- Keep the existing useful feedback for sold-out products and quantity-limit errors.
+- Do not replace useful validation messages with generic success messages.
+
+## 3. Cart Access
+
+Make sure the existing cart icon remains easy to use.
+
+Verify:
+- Clicking the cart icon opens the cart.
+- Cart badge updates immediately after Add to Cart.
+- Cart contents are visible without requiring a page refresh.
+- Closing the cart works.
+- Existing quantity/remove functionality remains intact.
+
+Do not redesign the entire cart yet.
+
+## 4. Product-to-Cart UX
+
+After Add to Cart:
+- The product should remain in its current position.
+- Do not cause the product grid to jump.
+- Do not change product prices or product data.
+- Do not remove the existing Add to Cart button unless the current implementation requires a state change.
+- Preserve sold-out behavior.
+
+## 5. Navigation + Product Section Testing
+
+After implementing the changes, test:
+
+1. Click Home.
+2. Click Shop.
+3. Click About.
+4. Click Contact.
+5. Add an available product to cart.
+6. Confirm the success feedback appears.
+7. Click View Cart if implemented.
+8. Confirm the cart opens correctly.
+9. Close the cart.
+10. Add another product.
+11. Confirm the cart badge updates.
+12. Test the maximum quantity message.
+13. Test a sold-out product.
+14. Refresh the page and confirm the cart still works.
+
+## 6. Accessibility for These Changes
+
+For the navigation and new notification:
+- Use semantic HTML where appropriate.
+- Do not remove visible focus indicators.
+- Make interactive elements keyboard accessible.
+- If the toast uses an accessibility announcement mechanism, use an appropriate ARIA live region without overusing ARIA.
+- Do not perform the full accessibility overhaul in this phase.
+
+## 7. Regression Check
+
+The following Prompt 2 functionality must continue working:
+
+- Add to Cart
+- Cart persistence
+- Quantity controls
+- Remove item
+- Search
+- Category filtering
+- Price sorting
+- Combined search + filter + sort
+- Quick View
+- Sold-out restriction
+- Maximum quantity restriction
+- Coupon logic
+- Pincode handling
+
+Do not change their underlying business rules unless a bug is discovered that directly prevents this Prompt 3 work.
+
+## Scope Boundary
+
+Do NOT implement these yet:
+
+- Full visual redesign
+- New product images
+- Full responsive redesign
+- Complete accessibility overhaul
+- SEO/JSON-LD
+- Performance optimization
+- Image optimization
+- Trust Strip
+- FAQ redesign/addition
+- Newsletter redesign
+- Typography overhaul
+- Major CSS architecture changes
+
+Those will be handled in later phases.
+
+## Before finishing
+
+Run a syntax check and inspect the browser console for new JavaScript errors.
+
+Then report:
+
+1. Files changed
+2. Navigation changes
+3. Add-to-Cart feedback changes
+4. Cart UX changes
+5. Accessibility changes made in this phase
+6. Tests performed
+7. Any console errors
+8. Any remaining issues
+9. Confirm that Prompt 2 functionality was not broken
+10. Concise summary of exactly what changed
+
+Do not modify anything outside this scope.]
+
+- Outcome: accepted
+- Why: The AI implemented the requested navigation and shopping UX improvements. Navbar links now navigate to the existing page sections, Add to Cart provides immediate toast feedback with a View Cart action, and cart/accessibility behavior was improved. Prompt 2 functionality remained intact and browser testing reported zero JavaScript errors.

@@ -87,9 +87,15 @@ h1.section { font-family: Pacifico; color: #800080; font-size: 40px; }
 #popup .x { position: absolute; right: -40px; top: -40px; color: #fff; font-size: 30px; cursor: pointer; }
 
 /* footer */
+html { scroll-behavior: smooth; }
 .footer { background: #333; color: #777; padding: 30px 0; margin-top: 40px; }
 .footer h1 { font-family: Pacifico; color: #ff69b4; }
 .legal { font-size: 9px; color: #555; }
+/* toast notification */
+#toast-container { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
+.toast { background: #1f3d2b; color: #fff; padding: 12px 18px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); font-family: Oswald, sans-serif; font-size: 13px; display: flex; align-items: center; gap: 12px; }
+.toast-btn { background: #d9962b; color: #fff; border: 0; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 11px; text-transform: uppercase; font-weight: bold; }
+.toast-btn:hover { background: #b87c1e; }
 </style>
 </head>
 <body>
@@ -98,24 +104,24 @@ h1.section { font-family: Pacifico; color: #800080; font-size: 40px; }
 
 <div class="header">
   <div class="wrapper">
-    <img src="images/logo.png">
-    <div class="nav">
-      <a href="#">HOME</a>
-      <a href="#">SHOP</a>
-      <a href="#">ABOUT</a>
-      <a href="#">CONTACT</a>
-    </div>
-    <input class="search" id="search" placeholder="Search teas...">
-    <div class="cart-icon" onclick="openCart()"><i class="fa fa-shopping-cart"></i><span id="cart-count">0</span></div>
+    <img src="images/logo.png" alt="Mistvale Tea Co. Logo">
+    <nav class="nav" aria-label="Main Navigation">
+      <a href="#hero">HOME</a>
+      <a href="#shop">SHOP</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+    <input class="search" id="search" placeholder="Search teas..." aria-label="Search teas">
+    <div class="cart-icon" onclick="openCart()" tabindex="0" role="button" aria-label="View Shopping Cart" onkeydown="if(event.key==='Enter'||event.key===' '){ openCart(); event.preventDefault(); }"><i class="fa fa-shopping-cart"></i><span id="cart-count">0</span></div>
   </div>
 </div>
 
-<div class="hero">
+<div class="hero" id="hero">
   <div>
     <div class="hero-title animate__animated animate__bounceIn">BEST TEA IN THE WORLD!!!</div>
     <p>Hand-picked from the misty hills. The most amazing, world-class, premium teas you will ever taste!!!</p>
     <div class="shark">&#9733; AS SEEN ON SHARK TANK INDIA &#9733;</div><br><br>
-    <div class="btn" onclick="document.getElementById('shop').scrollIntoView()">SHOP NOW</div>
+    <div class="btn" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">SHOP NOW</div>
   </div>
 </div>
 
@@ -130,7 +136,7 @@ h1.section { font-family: Pacifico; color: #800080; font-size: 40px; }
     <div class="filter" onclick="filterProducts('Herbal', this)">Herbal</div>
     <div class="filter" onclick="filterProducts('Gifts', this)">Gifts</div>
     &nbsp;&nbsp;
-    <select id="sort" onchange="sortProducts()">
+    <select id="sort" onchange="sortProducts()" aria-label="Sort teas">
       <option value="default">Sort</option>
       <option value="low">Price: Low to High</option>
       <option value="high">Price: High to Low</option>
@@ -151,7 +157,7 @@ h1.section { font-family: Pacifico; color: #800080; font-size: 40px; }
   <div id="ship-msg"></div>
   <div class="ship-bar"><div class="ship-fill" id="ship-fill"></div></div>
   <div id="cart-items"></div>
-  <input id="coupon" placeholder="Coupon code">
+  <input id="coupon" placeholder="Coupon code" aria-label="Coupon code">
   <div class="btn" onclick="applyCoupon()">APPLY</div>
   <div id="totals"></div>
   <br>
@@ -166,12 +172,12 @@ h1.section { font-family: Pacifico; color: #800080; font-size: 40px; }
 
 <div class="wrapper pincode">
   <h3>Check delivery</h3>
-  <input id="pin" placeholder="Enter pincode">
+  <input id="pin" placeholder="Enter pincode" aria-label="Enter pincode">
   <div class="btn" onclick="checkPin()">CHECK</div>
   <div id="pin-result"></div>
 </div>
 
-<div class="wrapper reviews">
+<div class="wrapper reviews" id="about">
   <h1 class="section">Rated 4.9/5 by 10,000+ happy customers!!</h1>
   <div class="review">"Best masala chai I have ever had. Tastes like my nani's kitchen." <br><b>- Ananya, Pune</b></div>
   <div class="review">"The Darjeeling first flush is so fresh. Packaging was lovely too." <br><b>- Rohit, Bengaluru</b></div>
@@ -183,13 +189,13 @@ h1.section { font-family: Pacifico; color: #800080; font-size: 40px; }
     <div class="x" onclick="document.getElementById('popup').style.display='none'">&times;</div>
     <h2>JOIN THE TEA CLUB!!!</h2>
     <p>Get 10% off your first order</p>
-    <input id="nl-email" placeholder="Your email">
+    <input id="nl-email" placeholder="Your email" aria-label="Your email">
     <div class="btn" onclick="subscribe()">SUBSCRIBE</div>
     <div id="nl-msg"></div>
   </div>
 </div>
 
-<div class="footer">
+<div class="footer" id="contact">
   <h1>MistVale</h1>
   <p>Mistvale Tea Co. &middot; 14 Hill Cart Road, Siliguri, West Bengal 734001 &middot; hello@mistvale.example &middot; +91 90000 12345</p>
   <p><i class="fa fa-instagram"></i> &nbsp; <i class="fa fa-facebook"></i> &nbsp; <i class="fa fa-youtube"></i></p>
@@ -197,6 +203,8 @@ h1.section { font-family: Pacifico; color: #800080; font-size: 40px; }
   <p class="legal">All prices are inclusive of GST. Returns are accepted within 7 days of delivery on unopened packs only; opened tea cannot be returned for hygiene reasons. Tea colour and flavour may vary slightly between harvests.</p>
   <p class="legal">&copy; 2020 MistVale. All right reserved.</p>
 </div>
+
+<div id="toast-container" role="status" aria-live="polite"></div>
 
 <script>
 // product data - comes from backend, DO NOT CHANGE ids, names or prices
@@ -247,8 +255,20 @@ var appliedCoupon = '';
 var currentCategory = 'all';
 var currentSort = 'default';
 var currentSearchQuery = '';
+var toastTimer = null;
 
 console.log('page loaded');
+
+function showToast(msg, showCartBtn) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var cartBtnHtml = showCartBtn ? '<button type="button" class="toast-btn" onclick="openCart()">View Cart</button>' : '';
+  container.innerHTML = '<div class="toast"><span>' + msg + '</span>' + cartBtnHtml + '</div>';
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(function () {
+    container.innerHTML = '';
+  }, 3000);
+}
 
 function renderProducts(list) {
   var html = '';
@@ -268,7 +288,7 @@ function renderProducts(list) {
     html += '<div class="price" id="price-' + p.id + '">₹' + p.price.toLocaleString('en-IN') + '</div>';
     if (isOos) {
       html += '<span class="badge-oos">SOLD OUT</span><br>';
-      html += '<div class="btn add-btn" style="opacity:0.5; cursor:not-allowed;" onclick="alert(\'This item is currently sold out.\')">SOLD OUT</div>';
+      html += '<div class="btn add-btn" style="opacity:0.5; cursor:not-allowed;" onclick="showToast(\'This item is currently sold out.\', false)">SOLD OUT</div>';
     } else {
       html += '<div class="btn add-btn" onclick="addToCart(' + p.id + ')">ADD TO CART</div>';
     }
@@ -334,7 +354,7 @@ function openQuickView(id) {
   html += '<select id="qv-size"><option>100g</option><option>250g</option></select>';
   html += '<p>₹' + p.price.toLocaleString('en-IN') + '</p>';
   if (isOos) {
-    html += '<div class="btn" style="opacity:0.5; cursor:not-allowed;">SOLD OUT</div>';
+    html += '<div class="btn" style="opacity:0.5; cursor:not-allowed;" onclick="showToast(\'This item is currently sold out.\', false)">SOLD OUT</div>';
   } else {
     html += '<div class="btn" onclick="addToCart(' + p.id + ')">ADD TO CART</div>';
   }
@@ -345,7 +365,11 @@ function openQuickView(id) {
 function addToCart(id) {
   id = Number(id);
   var p = PRODUCTS.find(function (x) { return x.id === id; });
-  if (!p || p.stock === 0) return;
+  if (!p) return;
+  if (p.stock === 0) {
+    showToast('"' + p.name + '" is currently sold out.', false);
+    return;
+  }
 
   var existing = cart.find(function (c) { return Number(c.id) === id; });
   var maxAllowed = Math.min(5, p.stock);
@@ -353,13 +377,15 @@ function addToCart(id) {
   if (existing) {
     if (existing.qty < maxAllowed) {
       existing.qty++;
+      showToast('"' + p.name + '" quantity updated in cart.', true);
     } else {
-      alert('Maximum allowed quantity (' + maxAllowed + ') reached for this item.');
+      showToast('Maximum allowed quantity (' + maxAllowed + ') reached for ' + p.name, false);
       return;
     }
   } else {
     if (maxAllowed > 0) {
       cart.push({ id: p.id, name: p.name, price: p.price, qty: 1 });
+      showToast('"' + p.name + '" added to cart.', true);
     }
   }
 
@@ -482,7 +508,7 @@ function plus(i) {
     renderCart();
     updateCount();
   } else {
-    alert('Maximum allowed quantity (' + maxAllowed + ') reached for this item.');
+    showToast('Maximum allowed quantity (' + maxAllowed + ') reached for ' + (p ? p.name : 'item'), false);
   }
 }
 
@@ -509,7 +535,7 @@ function updateQty(i, val) {
     var p = PRODUCTS.find(function (x) { return x.id === Number(c.id); });
     var maxAllowed = Math.min(5, p ? p.stock : 5);
     if (num > maxAllowed) {
-      alert('Maximum allowed quantity (' + maxAllowed + ') reached for this item.');
+      showToast('Maximum allowed quantity (' + maxAllowed + ') reached for ' + (p ? p.name : 'item'), false);
       c.qty = maxAllowed;
     } else {
       c.qty = num;

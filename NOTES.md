@@ -181,3 +181,44 @@ Verified manually:
 
 Remaining UX issue:
 - After clicking Add to Cart, there is no immediate visual confirmation near the user. The cart badge updates, but the user needs to scroll to the navbar to see it.
+
+## 15. Navigation + Shopping UX — Prompt 3
+
+The navigation and shopping UX improvements were implemented after the core functionality fixes.
+
+### Changes Implemented
+
+- Home, Shop, About, and Contact navbar links now navigate to the relevant existing sections.
+- Smooth scrolling was added for section navigation.
+- Add to Cart now provides immediate visual feedback through a toast notification.
+- Successful Add to Cart actions show the product name and a View Cart option.
+- Sold-out and maximum-quantity messages are shown through the same non-blocking feedback system.
+- Cart badge updates immediately after adding an item.
+- Cart contents continue to persist after page refresh.
+- Product cards do not shift when Add to Cart is used.
+- Cart icon was made keyboard accessible.
+- Navigation was given semantic structure.
+- Form controls received appropriate accessibility labels.
+- Toast messages use an accessible live/status region.
+
+### Manual / AI Verification
+
+- Home navigation tested.
+- Shop navigation tested.
+- About navigation tested.
+- Contact navigation tested.
+- Add to Cart feedback tested.
+- View Cart from the toast tested.
+- Maximum quantity limit tested.
+- Sold-out product feedback tested.
+- Cart persistence after refresh tested.
+- Browser console reported no JavaScript errors after the changes.
+
+### Current Status
+
+- Prompt 2 core functionality remains working.
+- Prompt 3 navigation and shopping UX improvements are complete.
+- Responsive design has not been implemented yet.
+- Full visual/brand redesign has not been implemented yet.
+- New professional product imagery has not been implemented yet.
+- SEO/structured data work has not been implemented yet.
