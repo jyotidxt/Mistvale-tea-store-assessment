@@ -163,3 +163,21 @@ The audit identified issues related to:
 - Manual observations verified against the code.
 - Additional issues identified from README.md and BRAND.md.
 - No implementation changes made yet.
+
+## 14. Core Functional Fixes — Prompt 2
+
+The core functional issues identified during the audit were fixed.
+
+Verified manually:
+- Add to Cart works.
+- Cart quantity updates correctly.
+- Maximum quantity of 5 is enforced.
+- Sold-out products cannot be added.
+- Search works.
+- Category filtering works.
+- Price sorting works.
+- Quick View works.
+- Cart persistence works after refresh.
+
+Remaining UX issue:
+- After clicking Add to Cart, there is no immediate visual confirmation near the user. The cart badge updates, but the user needs to scroll to the navbar to see it.
